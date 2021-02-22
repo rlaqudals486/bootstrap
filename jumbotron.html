@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</head>
+<body>
+    <h3>점보트론 사용하기</h3>
+    <!-- 점보트론은 웹 페이지의 header 부분을 쉽게 만들기 위해서 사용 -->
+    <!-- jumbotron 클래스를 사용하면 해당 페이지의 주제를 나타내는 제목을 입력하는 부분이 출력됨 -->
+    <!-- 점보트론은 container 안에 사용하지 않아도 됨 -->
+    <!-- jumbotron 클래스는 좌우에 여백이 존재함 -->
+    <!-- jumbotron-fluid 클래스를 추가하면 여백이 없는 점보트론을 사용 가능함 -->
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>부트스트랩 점보트론 사용하기</h1>
+            <p>일반적인 형태에서는 container 안에서 jumbotron을 사용함</p>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <!-- 여기에서 jumbotron-fluid ㅏㅇㄴ에 container를 사용한 이유는 다른 컨텐츠와 여백을 맞추기 위함 -->
+            <h1>jumbotron-fluid 사용하기</h1>
+            <p>jumbotron-fluid 클래스를 추가하면 좌우의 여백이 없는 점보트론 사용</p>
+        </div>
+        <h1>container 밖의 컨텐츠</h1>
+    </div>
+
+    <br><hr><br>
+
+    <div class="container">
+        <h3>alert 사용하기</h3>
+        <div>
+            <div class="alert alert-primary">alert-primary 사용</div>
+            <div class="alert alert-secondary">alert-secondary 사용</div>
+            <div class="alert alert-info">alert-info 사용</div>
+            <div class="alert alert-success">alert-success 사용</div>
+            <div class="alert alert-warning">alert-warning 사용</div>
+            <div class="alert alert-danger">alert-danger 사용</div>
+            <div class="alert alert-light">alert-light 사용</div>
+            <div class="alert alert-dark">alert-dark 사용</div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <div class="container">
+        <!-- alert-dismissible 클래스를 추가하고 자식 태그로 button 태그를 입력 -->
+        <!-- button 에 close 클래스를 추가하고 사용자 속성으로 data-dismiss="alert"를 추가 -->
+        <!-- alert 클래스에 fade, show 클래스를 추가하면 애니메이션 효과가 주어짐 -->
+        <h3>닫기 버튼이 있는 alert</h3>
+        <div>
+            <div class="alert alert-primary aler-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>primary!</strong> alert-primary 사용
+            </div>
+            <div class="alert alert-secondary aler-dismissible fade show">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>secondary!</strong> alert-secondary 사용
+            </div>
+            <div class="alert alert-success aler-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>success!</strong> alert-success 사용
+            </div>
+            <div class="alert alert-info aler-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>info!</strong> alert-info 사용
+            </div>
+            <div class="alert alert-warning aler-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>warning!</strong> alert-warning 사용
+            </div>
+            <div class="alert alert-danger aler-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>danger!</strong> alert-danger 사용
+            </div>
+            <div class="alert alert-light aler-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>light!</strong> alert-light 사용
+            </div>
+            <div class="alert alert-dark aler-dismissible">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                <strong>dark!</strong> alert-dark 사용
+            </div>
+        </div>
+    </div>
+
+    <br><hr><br>
+
+    <h3>배지 사용하기</h3>
+    <!-- 배지는 주로 다른 태그와 함께 같은 라인에서 사용하므로 span 태그에 주로 사용함 -->
+    <!-- badge 클래스를 사용하여 배지를 사용하고 접두사 badge- 에 테마 색상명을 사용하여 배지의 색상을 변경할 수 있음 -->
+    <!-- badge-pill 클래스를 추가하여 배지의 모양을 알약모양으로 변경할 수 있음 -->
+    <!-- 버튼과 같은 태그의 내부에 사용할 수 있음 -->
+    <div>
+        <h1>배지 사용하기 <span class="badge badge-primary">New</span></h1>
+        <h2>배지 사용하기 <span class="badge badge-success">New</span></h2>
+        <h3>배지 사용하기 <span class="badge badge-info">New</span></h3>
+        <h4>배지 사용하기 <span class="badge badge-warning">New</span></h4>
+        <h5>배지 사용하기 <span class="badge badge-danger">New</span></h5>
+        <h6>배지 사용하기 <span class="badge badge-dark">New</span></h6>
+    </div>
+
+    <br>
+
+    <div>
+        <h1>배지 모양 변경<span class="badge badge-pill badge-primary">New</span></h1>
+        <h2>배지 모양 변경<span class="badge badge-pill badge-success">New</span></h2>
+        <h3>배지 모양 변경<span class="badge badge-pill badge-info">New</span></h3>
+        <h4>배지 모양 변경<span class="badge badge-pill badge-warning">New</span></h4>
+        <h5>배지 모양 변경<span class="badge badge-pill badge-danger">New</span></h5>
+        <h6>배지 모양 변경<span class="badge badge-pill badge-dark">New</span></h6>
+    </div>
+    
+    <br>
+
+    <div>
+        <button type="button" class="btn-primary">버튼안에 버튼</button>
+    </div>
+</body>
+</html>

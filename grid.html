@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 부트스트랩은 모바일환경 친화적임으로 viewport 설정이 필수 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩은 트위터에서 만든 UI 프레임워크 -->
+    <!-- 부트스트랩4는 jquery와 css를 조합해서 미리 디자인된 태그를 제공함 -->
+    <!-- 부트스트랩은 class 속성에 미리 지정된 클래스명을 입력하여 사용함 -->
+
+    <!-- 부트스트랩 사용 시 필요한 파일은 bootstrap.css, jquery.js, bootstrap.js, 옵션으로 popper.js를 사용함 -->
+
+    <!-- 파일 로드 순서는 1. bootstrap.css, 2. jquery.js, 3. popper.js, 4. bootstrap.js -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  
+
+  <style>
+    /* important : 중요한 css 속성이라는 의미로 !important가 설정된 CSS 속성은 아래에 동일한 속성을 다른 설정값을 변경하더라도 변경되지 않음 */
+	#div5 .border {
+		border-color: red !important;
+	}
+  </style>
+
+</head>
+<body>
+    <h1>부트스트랩 테스트</h1>
+    <h1 class="display-1">부트스트랩 테스트</h1>
+
+    <div class="container bg-secondary" style="height: 200px;"></div>
+
+    <div class="container-fluid bg-secondary" style="height: 200px;">12</div>
+
+    <!-- grid system -->
+    <!-- 그리드 시스템은 화면을 미리 12등분으로 분할하여 화면을 디자인하는 방식 -->
+    <br>
+    <div class="row">
+        <div class="col-12 bg-primary"></div>
+    </div>
+    <br>
+    <div class="row text-center">
+        <div class="col-sm-6 bg-secondary">6</div>
+        <div class="col-sm-6 bg-success">6</div>
+    </div>
+    
+    <br>
+    
+    <!-- 21-02-22 시작 -->
+    <!-- grid 시스템을 사용 시 반드시 row를 먼저 입력하고 자식 태그로 col 을 사용해야 함 -->
+    <!-- grid 최대한 한 라인에 12를 맞춰야함 -->
+    <!-- grid 의 크기가  12를 초과하지 않으면 크게 상관없음-->
+    <div id="div5" class="container" style="box-sizing: border-box;">
+        <h3>grid의 크기가 12를 초과 할 경우</h3>
+    	<div class="row">
+    		<div class="col-md-1 border">1</div>
+    		<div class="col-md-1 border">2</div>
+    		<div class="col-md-1 border">3</div>
+    		<div class="col-md-1 border">4</div>
+    		<div class="col-md-1 border">5</div>
+    		<div class="col-md-1 border">6</div>
+    		<div class="col-md-1 border">7</div>
+    		<div class="col-md-1 border">8</div>
+    		<div class="col-md-1 border">9</div>
+    		<div class="col-md-1 border">10</div>
+    		<div class="col-md-1 border">11</div>
+    		<div class="col-md-1 border">12</div>
+    		<div class="col-md-1 border">13</div>
+    	</div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <!-- grid가 12 미만일 경우 -->
+        <div class="col-md-2 border">2</div>
+        <div class="col-md-2 border">4</div>
+        <div class="col-md-2 border">6</div>
+        <div class="col-md-2 border">8</div>
+        <div class="col-md-2 border">10</div>
+    </div>
+
+    <hr>
+    <!-- offset을 사용하면 중간에 원하는 크기의 빈 공간을 생성 가능 -->
+    <h3>grid 시스템 사용 시 중간에 컨텐츠가 없는 빈 공간 만들기</h3>
+    <div class="row">
+        <div class="col-md-2 border">2</div>
+        <div class="col-md-2 border">4</div>
+        <div class="col-md-2 border">6</div>
+        <div class="col-md-2 offset-md-2 border">10</div>
+        <div class="col-md-2 border">12</div>
+    </div>
+
+    <br><hr><br>
+
+    <!-- grid 시스템을 사용하여 grid 시스템의 column 안에 column 만들기 -->
+    <div id="div6" class="container">
+        <div class="col-md-8 p-3" style="border:1px solid red">.col-md-8
+            <div class="row">
+                <div class="col-md-4" style="border: 1px dashed blue;">내부 12개 grid 중 3칸짜리 1번</div>
+                <div class="col-md-4" style="border: 1px dashed blue;">내부 12개 grid 중 3칸짜리 2번</div>
+                <div class="col-md-4" style="border: 1px dashed blue;">내부 12개 grid 중 3칸짜리 3번</div>
+            </div>
+        </div>
+        <div class="com-md-4 p-3
+        " style="border:1px solid red">.col-md-4
+            <div class="row">
+                <div class="col-md-6" style="border: 1px dashed blue;">내부 12개 grid 중 6칸짜리 1번</div>
+                <div class="col-md-6" style="border: 1px dashed blue;">내부 12개 grid 중 6칸짜리 2번</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

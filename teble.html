@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+    <script src="./js/jquery-3.5.1.js"></script>
+    <!-- popper.js 팝업과 관련 기능을 쉽게 사용할 수 있도록 해주는 자바스크립트 라이브러리 -->
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h3>부트스트랩 테이블</h3>
+        <!-- table 클래스를 사용하면 미리 디자인된 부트스트랩 테이블을 사용할 수 있음 -->
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>정인선</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>이시영</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <table class="table">
+            <!-- table striped 클래스를 추가하면 홀수 라인과 짝수 라인의 배경색이 다른 형태의 테이블을 출력 -->
+            <!-- table-hover 클래스를 추가하면 마우스의 포인터가 위치한 라인의 색상이 변경되는 형태의 테이블을 출력 -->
+            <!-- table-borderless 클래스를 사용하면 테이블의 테두리선을 제거 -->
+            <!-- table-dark 클래스 사용 시 검정색 테마의 테이블을 출력 -->
+            <!-- 테이블에도 부트스트랩의 테마 색상을 사용할 수 있음 -->
+            <!-- table-primary, table-secondary, table-info, table-success, table-warning, table-danger, table-dark, table-light, table-active(마우스 호버시 지정된 컬러를 사용) -->
+            <thead>
+                <tr>
+                    <th>이름</th>
+                    <th>직업</th>
+                    <th>성별</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>아이유</td>
+                    <td>가수</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>정인선</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+                <tr>
+                    <td>이시영</td>
+                    <td>배우</td>
+                    <td>여성</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 문제3) 게시판에 내용이 5줄 이상이 되도록 하여 부트스트랩의 테이블을 이용하여 화면에 출력하세요  -->
+    <!-- 홀수줄과 짝수줄 색상을 다르게 표현하고, 마우스가 올라가 라인의 색상을 변경, 검정 테마로 작성 -->
+
+    <div class="container-test">
+        <table class="table table-dark table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>말머리</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>작성일</th>
+                    <th>조회</th>
+                    <th>추천</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>791789</td>
+                    <td>일반</td>
+                    <td>내가 사는 지구는 젤다 35주년 축하했는데? [29]</td>
+                    <td>ㅇㅇ(58.145)</td>
+                    <td>11:06</td>
+                    <td>2685</td>
+                    <td>89</td>
+                </tr>
+                <tr>
+                    <td>791775</td>
+                    <td>일반</td>
+                    <td>젤다 35주년 상황 파악 안되는 놈들의 Q&A [7]</td>
+                    <td>ㅇㅇ(222.234)</td>
+                    <td>10:59</td>
+                    <td>714</td>
+                    <td>25</td>
+                </tr>
+                <tr>
+                    <td>791759</td>
+                    <td>일반</td>
+                    <td>젤다35주년 요약.jpg [5]</td>
+                    <td>ㅇㅇ(121.138)</td>
+                    <td>10:44</td>
+                    <td>3049</td>
+                    <td>43</td>
+                </tr>
+                <tr>
+                    <td>791555</td>
+                    <td>일반</td>
+                    <td>닌붕이 방금 소름돋는 상상함 [18]</td>
+                    <td>아이오닉</td>
+                    <td>04:31</td>
+                    <td>4269</td>
+                    <td>67</td>
+                </tr>
+                <tr>
+                    <td>791459</td>
+                    <td>일반</td>
+                    <td>새벽에도 뉴비 받아주냐 [69]</td>
+                    <td>PangPangBus</td>
+                    <td>03:07</td>
+                    <td>3574</td>
+                    <td>52</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

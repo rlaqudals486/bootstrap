@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        header {
+            background-color : skyblue;
+        }
+
+        main {
+            background-color : yellowgreen;
+            height: 500px;
+        }
+
+        footer {
+            background-color : deeppink
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- 문제1 > grid3.html 파일을 참고하여 사이드바 메뉴와 메인 컨텐츠 사이의 거리를 grid 크기 1만큼 빈공간이 존재하는 사이트를 layout을 작성하세요 -->
+    <!-- 문제2 > grid3.html 파일을 참고하여 메인 컨텐츠 영역을 2분할하여 표시하는 사이트 layout을 작성하세요 -->
+
+
+    <!-- 헤더부분 -->
+    <header class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>header</h1>
+            </div>
+        </div>
+    </header>
+    <!-- 메인 컨텐츠 -->
+    <main class="container">
+        <div class="row">
+            <!-- 사이드바 -->
+            <div id="side" class="col-sm-2">
+                <h4>side</h4>
+            </div>
+            <div class="col-sm-1 offset-md-1 border">1</div>
+            <!-- 컨텐츠 -->
+            <div class="col-sm-8">
+                <h4>content</h4>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 푸터 부분 -->
+    <footer class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <p>footer</p>
+            </div>
+        </div>
+    </footer>
+
+
+</html>
