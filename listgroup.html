@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <h3>list group 사용</h3>
+    <!-- ul 태그에 list-group 을 사용하고 li 태그에 list-group-item 을 사용하여 화면에 표현 -->
+    <!-- li 태그에 active, disabled 클래스를 추가하여 활성, 비활성 상태를 표현 -->
+    <!-- li 태그에 list-group-item-action 클래스를 추가하여 마우스 포인터가 해당 태그 위에 있을 경우 색상을 다르게 표현 -->
+    <!-- ul 태그에 list-group-fhush 클래스를 추가하여 리스트 그룹의 디자인 변경 -->
+    <!-- ul 태그에 list-group-horizontal 클래스를 추가하여 가로 목록으로 변경 -->
+    <!-- li 태그에 접두사 list-group-item-테마색상명 을 추가하여 상황별로 다른 색상을 변경 가능 -->
+    <!-- li 태그의 자식 태그로 span 태그를 추가하고 해당 span 태그에 badge 클래스를 추가하면 배지를 사용할 수 있음 -->
+      <ul class="list-group">
+        <li class="list-group-item">첫번째 항목</li>
+        <li class="list-group-item">두번째 항목</li>
+        <li class="list-group-item">세번째 항목</li>
+      </ul>
+
+      <hr>
+
+      <ul class="list-group">
+        <li class="list-group-item active">첫번째 항목</li>
+        <li class="list-group-item list-group-item-action">두번째 항목</li>
+        <li class="list-group-item list-group-item-action">세번째 항목</li>
+        <li class="list-group-item list-group-item-action">네번째 항목</li>
+        <li class="list-group-item disabled">다섯번째 항목</li>
+      </ul>
+
+      <hr>
+
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action list-group-item-primary">primary</li>
+        <li class="list-group-item list-group-item-action list-group-item-success">success</li>
+        <li class="list-group-item list-group-item-action list-group-item-info">info</li>
+        <li class="list-group-item list-group-item-action list-group-item-warning">warning</li>
+        <li class="list-group-item list-group-item-action list-group-item-danger">danger</li>
+        <li class="list-group-item list-group-item-action list-group-item-secondary">secondary</li>
+        <li class="list-group-item list-group-item-action list-group-item-dark">dark</li>
+        <li class="list-group-item list-group-item-action list-group-item-light">light</li>
+      </ul>
+
+      <hr>
+
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-action">받은 편지함
+          <span class="badge badge-primary">10</span>
+        </li>
+        <li class="list-group-item list-group-item-action">보낸 편지함
+          <span class="badge badge-primary badge-pill">5</span>
+        </li>
+        <li class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">휴지통
+          <span class="badge badge-success">30</span>
+        </li>
+      </ul>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

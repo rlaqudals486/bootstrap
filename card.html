@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <h3>card 사용하기</h3>
+    <!-- 내용 주위에 테두리가 있는 상자 -->
+    <!-- 부모 태그로 div를 사용하고 클래스명을 card로 입력 자식 태그로 div를 사용하고 클래스명을 card-body로 입력하여 사용 -->
+    <!-- 자식 태그 div에 card-header, card-footer를 입력하여 컨텐츠를 구분하여 입력할 수 있음 -->
+    <!-- 부모 태그에 접두사 bg-테마컬러명을 사용하여 색상을 변경할 수 있음 -->
+    <!-- 자식 태그인 card-body에 card-title, card-text, card-link 를 사용하여 제목, 텍스트, 링크를 추가할 수 있음 -->
+    <!-- card-body 이전에 img 태그를 입력하고 card-img-top, card-img-bottom 클래스를 추가하면 해당 카드 상단(하단)에 이미지가 추가됨 -->
+    <!-- card-link 에 stretched-link 클래스를 추가하면 카드 전체가 링크 버튼이 됨 -->
+    <!-- card-body 대신 card-img-overlay 클래스를 사용하면 이미지 위에 card-body의 내용이 오버레이됨 -->
+    <div class="card">
+      <div class="card-body">기본 카드 사용</div>
+    </div>
+    <hr>
+    <div class="card">
+      <div class="card-header">카드 헤더</div>
+      <div class="card-body">카드 바디</div>
+      <div class="card-footer">카드 푸터</div>
+    </div>
+    <hr>
+    <div class="card bg-success text-white">
+      <div class="card-body">
+        <h4 class="card-title">card body 의 title</h4>
+        <p class="card-text">card body의 일반 텍스트 사용하기</p>
+        <p class="card-text">card body의 일반 텍스트 사용하기</p>
+        <p>일반 텍스트</p>
+        <a href="#" class="card-link">card body의 link 1</a>
+        <a href="#" class="card-link">card body의 link 2</a>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="card" style="width: 300px;">
+      <img src="./images/pengsu03.jpg" alt="" class="card-img-top" style="width: 100%;">
+      <div class="card-body">
+        <h4 class="card-title">상단에 이미지 넣기</h4>
+        <p class="card-text">상단에 이미지를 추가한 card 사용하기</p>
+        <a href="https://www.daum.net" class="btn btn-primary">자세히..</a>
+      </div>
+    </div>
+    <div class="card" style="width: 300px;">
+      <div class="card-body">
+        <h4 class="card-title">하단에 이미지 넣기</h4>
+        <p class="card-text">하단에 이미지를 추가한 card 사용하기</p>
+        <a href="https://www.daum.net" class="btn btn-primary">자세히</a>
+      </div>
+      <img src="./images/pengsu03.jpg" alt="" class="card-img-bottom" style="width: 100%;">
+    </div>
+    <hr>
+    <div class="card" style="width: 300px;">
+      <img src="./images/pengsu04.jpg" alt="" class="card-img-top" style="width: 100%;">
+      <div class="card-body">
+        <h4 class="card-title">카드 전체가 링크 버튼</h4>
+        <p class="card-text">카드 전체가 링크 버튼으로 동작 됨</p>
+        <a href="https://www.daum.net" class="btn btn-primary stretched-link">링크 1</a>
+      </div>
+    </div>
+    
+    <hr>
+    <!-- 부모 태그 div에 card-columns 클래스를 사용하면 card 클래스를 그룹으로 묶을 수 있음 -->
+    <!-- 가로 너비 576px 이하일 경우 세로로 정렬 됨 -->
+    <div class="card-columns">
+
+      <div class="card bg-primary">
+        <div class="card-body text-center">
+          <p class="card-text">1번 카드</p>
+        </div>
+      </div>
+
+      <div class="card bg-success">
+        <div class="card-body text-center">
+          <p class="card-text">2번 카드</p>
+        </div>
+      </div>
+
+      <div class="card bg-info">
+        <div class="card-body text-center">
+          <p class="card-text">3번 카드</p>
+        </div>
+      </div>
+
+      <div class="card bg-warning">
+        <div class="card-body text-center">
+          <p class="card-text">4번 카드</p>
+        </div>
+      </div>
+
+      <div class="card bg-light">
+        <div class="card-body text-center">
+          <p class="card-text">5번 카드</p>
+        </div>
+      </div>
+
+      <div class="card bg-danger">
+        <div class="card-body text-center">
+          <p class="card-text">6번 카드</p>
+        </div>
+      </div>
+
+      <div class="card bg-danger">
+        <div class="card-body text-center">
+          <p class="card-text">7번 카드</p>
+        </div>
+      </div>
+
+      <div class="card bg-primary">
+        <div class="card-body text-center">
+          <p class="card-text">8번 카드</p>
+        </div>
+      </div>
+  
+      <div class="card bg-success">
+        <div class="card-body text-center">
+          <p class="card-text">9번 카드</p>
+        </div>
+      </div>
+  
+      <div class="card bg-info">
+        <div class="card-body text-center">
+          <p class="card-text">10번 카드</p>
+        </div>
+      </div>
+  
+      <div class="card bg-warning">
+        <div class="card-body text-center">
+          <p class="card-text">11번 카드</p>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <!-- card-group, card-deck 사용하여 카드를 그룹화할 수 있음 -->
+    <!-- card-deck은 각각의 카드 사이에 여백이 존재, card-group은 카드 사이의 여백이 없음 -->
+    <!-- 가로 너비 576px 이하일 경우 세로로 정렬됨 -->
+    <div class="card-deck">
+      <div class="card bg-primary">
+        <div class="card-body text-center">
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+        </div>
+      </div>
+      <div class="card bg-warning">
+        <div class="card-body text-center">
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+        </div>
+      </div>
+      <div class="card bg-success">
+        <div class="card-body text-center">
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+        </div>
+      </div>
+      <div class="card bg-danger">
+        <div class="card-body text-center">
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="card-group">
+      <div class="card bg-primary">
+        <div class="card-body text-center">
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+        </div>
+      </div>
+      <div class="card bg-warning">
+        <div class="card-body text-center">
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+        </div>
+      </div>
+      <div class="card bg-success">
+        <div class="card-body text-center">
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+        </div>
+      </div>
+      <div class="card bg-danger">
+        <div class="card-body text-center">
+          <p class="card-text">대통령은 사면·감형 또는 복권을 명할 수 있다.</p>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      var progress = 0; // 현재 프로그레스바 위치를 저장할 변수
+      var timerId = 0; // 타이머 id 값을 저장하기 위한 변수
+
+      $("#btnDown").on("click", function() {
+        progress = 0;
+        $("#prog1").css("width", "0%"); // css의 속성 width을 변경
+        $("#btnDown").text("다운로드 중..."); // 버튼 글자 변경
+        // attr : 해당 태그의 지정한 속성을 가져오거나 설정하는 함수
+        $("#btnDown").attr("disabled", "disabled"); // 버튼 태그에 disabled 속성 추가
+        // 자바스크립트에서 사용하는 타이머 함수
+        // setTimeout(1회용), setInterval(clear 전까지 계속 실행) : 지정한 시간이 지난 후 실행
+        timerId = setInterval(function() {
+          if (progress < 100) {
+            progress += 10;
+            $("#prog1").css("width", progress+"%"); // css의 속성 width을 변경
+            $("#prog1").text(progress + "%"); // progress바의 글자 변경
+          }
+          else {
+            clearInterval(timerId); // 타이머 삭제
+            $("#btnDown").removeAttr("disabled"); // disabled 속성 삭제
+            $("#btnDown").text("다운로드 완료"); // 버튼의 글자 변경
+          }
+        }, 500);
+      });
+    });
+  </script>
+
+</head>
+<body>
+  
+  <div class="container">
+    <h3>프로그레스바 사용</h3>
+    <!-- 각종 진행율을 표시하는데 사용 -->
+    <!-- div 태그 2개로 생성함 -->
+    <!-- 부모 div 태그에 progress 클래스를 사용하고 자식 div에 progress-bar 를 사용하여 프로그레스바를 생성 -->
+    <!-- 자식 div의 css 속성 width에 %로 값을 입력하여 진행율을 표시함 -->
+    <!-- 자식 div의 시작태그와 끝태그 사이에 텍스트를 입력하여 글자를 출력할 수 있음 -->
+    <!-- 자식 div에 부트스트랩 배경 테마 컬러를 사용하여 색상을 변경할 수 있음 -->
+    <!-- 자식 div에 progress-bar-striped, progress-bar-animated를 추가하여 애니메이션 효과를 줄 수 있음 -->
+    <div class="progress">
+      <div class="progress-bar" style="width: 80%;">80%</div>
+    </div>
+    <hr>
+    <div class="progress">
+      <div id="prog1" class="progress-bar progress-bar-striped progress-bar-animated bg-success" style="width: 0%;">0%</div>
+    </div>
+    <button class="btn btn-outline-primary" type="button" id="btnDown">클릭 시 다운로드</button>
+
+
+    <hr>
+
+    <h3>하나의 프로그레스에 여러개의 프로그레스바 사용하기</h3>
+    <!-- 부모 태그인 div에 자식 태그로 여러개의 div를 추가하여 progress-bar를 사용 -->
+    <div class="progress">
+      <div class="progress-bar bg-success" style="width: 30%;">빈 용량</div>
+      <div class="progress-bar bg-info" style="width: 20%;">사진</div>
+      <div class="progress-bar bg-warning" style="width: 40%;">앱</div>
+    </div>
+  </div>
+
+  <br><hr><br>
+
+  <div class="container">
+    <h3>스피너 사용하기</h3>
+    <!-- div 나 span 태그에 spinner-border 클래스를 사용하면 스피너를 사용할 수 있음 -->
+    <!-- 스피너도 접두사 text-테마컬러명을 사용하여 색상을 변경할 수 있음 -->
+    <!-- spinner-border 대신 spinner-grow 를 사용하여 스피너의 모양을 변경 -->
+    <!-- spinner-border-sm, spinner-grow-sm을 사용하여 작은 크기의 스피너를 사용 -->
+    <div class="spinner-border"></div>
+    <div class="spinner-border text-primary"></div>
+    <div class="spinner-border text-info"></div>
+    <div class="spinner-grow text-success"></div>
+    <div class="spinner-grow text-warning"></div>
+    <div class="spinner-border spinner-border-sm text-dark"></div>
+    <div class="spinner-grow spinner-grow-sm text-secondary"></div>
+
+    <button class="btn btn-primary">
+      <span class="spinner-border spinner-border-sm"></span>
+    </button>
+    <button class="btn btn-primary">
+      <span class="spinner-border spinner-border-sm"></span> 로딩중..
+    </button>
+    <button class="btn btn-primary" disabled>
+      <span class="spinner-border spinner-border-sm"></span> 로딩중..
+    </button>
+    <button class="btn btn-primary" disabled>
+      <span class="spinner-grow spinner-grow-sm"></span> 로딩중..
+    </button>
+
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

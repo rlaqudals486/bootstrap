@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <h3>pagination 사용하기</h3>
+    <!-- ul, li 태그를 사용하여 페이지 구분 버튼을 생성 -->
+    <!-- ul 태그에 pagination 클래스를 사용하고, li 태그에 page-item, li 태그의 자식 태그로 a 태그를 사용하고 page-link 클래스를 추가하여 사용 -->
+    <!-- li 태그에 active 클래스를 추가하여 해당 페이지를 열고 있는 것처럼 표현 -->
+    <!-- li 태그에 disabled 클래스를 추가하여 해당 페이지 버튼을 비활성화 -->
+    <!-- ul 태그에 pagination-lg, pagination-sm 추가하여 페이지버튼 크기 변경 -->
+    <!-- ul 태그에 justify-content-center, justify-content-start(기본, 왼쪽), justify-config-end 를 추가하여 중앙, 왼쪽, 오른쪽으로 정렬이 가능함 -->
+    <div>
+      <ul class="pagination">
+        <li class="page-item"><a href="#" class="page-link">Prev</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+      </ul>
+    </div>
+    <hr>
+    <div>
+      <ul class="pagination pagination-sm">
+        <li class="page-item disabled"><a href="#" class="page-link">&laquo;</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item active"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+      </ul>
+    </div>
+    <hr>
+
+    <div>
+      <ul class="pagination justify-content-start">
+        <li class="page-item"><a href="#" class="page-link">Prev</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+      </ul>
+      <ul class="pagination justify-content-center">
+        <li class="page-item"><a href="#" class="page-link">Prev</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+      </ul>
+      <ul class="pagination justify-content-end">
+        <li class="page-item"><a href="#" class="page-link">Prev</a></li>
+        <li class="page-item"><a href="#" class="page-link">1</a></li>
+        <li class="page-item"><a href="#" class="page-link">2</a></li>
+        <li class="page-item"><a href="#" class="page-link">3</a></li>
+        <li class="page-item"><a href="#" class="page-link">4</a></li>
+        <li class="page-item"><a href="#" class="page-link">5</a></li>
+        <li class="page-item"><a href="#" class="page-link">Next</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

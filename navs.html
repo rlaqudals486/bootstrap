@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+</head>
+<body>
+  
+  <div class="container">
+    <h3>navs 사용하기</h3>
+    <!-- navs는 네비게이션 메뉴를 사용하고자할 경우 사용하는 태그 -->
+    <!-- ul 태그와 li, a 태그에 클래스를 추가하여 사용 -->
+    <!-- ul 태그에 nav 클래스를 추가하여 사용 -->
+    <!-- ul 태그에 flex-column 클래스를 추가하면 세로로 정렬된 메뉴를 생성 -->
+    <!-- ul 태그에 justify-content-start(기본, 왼쪽), justify-content-center(중앙), justify-content-end(오른쪽) 을 추가하여 정렬할 수 있음 -->
+    <!-- ul 태그에 nav-tabs, nav-pills 를 추가하여 모양을 변경할 수 있음 -->
+    <!-- nav-tabs, nav-pills 사용 시 nav-justifyed 클래스를 추가하면 화면 전체크기에 맞추어 메뉴를 출력함 -->
+    <ul class="nav">
+      <li class="nav-item"><a href="#" class="nav-link">링크1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크3</a></li>
+    </ul>
+
+    <hr>
+    
+    <ul class="nav justify-content-center">
+      <li class="nav-item"><a href="#" class="nav-link">링크1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크3</a></li>
+    </ul>
+
+    <ul class="nav justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link">링크1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크3</a></li>
+    </ul>
+
+    <hr>
+
+    <ul class="nav flex-column">
+      <li class="nav-item"><a href="#" class="nav-link">링크1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크3</a></li>
+    </ul>
+
+    <hr>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item"><a href="#" class="nav-link active">링크1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link disabled">링크3</a></li>
+    </ul>
+
+    <hr>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item"><a href="#" class="nav-link active">링크1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link disabled">링크3</a></li>
+    </ul>
+
+    <hr>
+    <ul class="nav nav-tabs nav-justified">
+      <li class="nav-item"><a href="#" class="nav-link active">링크1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link disabled">링크3</a></li>
+    </ul>
+
+    <hr>
+
+    <ul class="nav nav-pills nav-justified">
+      <li class="nav-item"><a href="#" class="nav-link active">링크1</a></li>
+      <li class="nav-item"><a href="#" class="nav-link">링크2</a></li>
+      <li class="nav-item"><a href="#" class="nav-link disabled">링크3</a></li>
+    </ul>
+
+    <br><hr><br>
+
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a href="#" class="nav-link active">활성링크</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">드랍다운버튼</a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item">링크1</a>
+          <a href="#" class="dropdown-item">링크2</a>
+          <a href="#" class="dropdown-item">링크3</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">비활성링크</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link disabled">비활성링크</a>
+      </li>
+    </ul>
+
+    <br><hr><br>
+
+    <h3>다이나믹 탭</h3>
+    <!-- 탭을 클릭 시 해당 탭의 영역이 열리는 형태의 메뉴 -->
+    <!-- 다른 페이지로 이동이 아니라 아코디언 리스트 처럼 해당 영역이 숨겨져 있다가 열림 -->
+    <!-- nav-tabs 메뉴와 연결된 영역인 div 가 아래에 존재함 -->
+    <!-- tab-content 클래스를 사용하는 div 가 부모 태그 역활을 하고, 자식 태그로 열렸다가 닫혔다할 영역인 div가 class 명 container, tab-pane, active, fade 을 가지고 있음 -->
+    <!-- 영역이 active일 경우 해당 영역이 화면에 표시되며, fade 일 경우 화면에서 숨겨짐 -->
+
+    <!-- nav 메뉴 영역 -->
+    <ul class="nav nav-tabs">
+      <!-- li의 수는 tab-content의 container 수와 동일해야함 -->
+      <!-- 처음부터 화면에 표시할 영역은 a 태그의 클래스에 active를 추가 -->
+      <li class="nav-item">
+        <a href="#home" class="nav-link active" data-toggle="tab">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="#link1" class="nav-link" data-toggle="tab">링크 1</a>
+      </li>
+      <li class="nav-item">
+        <a href="#link2" class="nav-link" data-toggle="tab">링크 2</a>
+      </li>
+    </ul>
+
+    <!-- 화면에 표시될 컨텐츠 영역 -->
+    <div class="tab-content">
+      <!-- container의 수는 li의 수와 동일해야함 -->
+      <div id="home" class="container tab-pane active">
+        <h3>Home</h3>
+        <p>home 클릭 시 화면에 표시될 영역</p>
+      </div>
+      <div id="link1" class="container tab-pane fade">
+        <h3>Link1</h3>
+        <p>Link1 클릭 시 화면에 표시될 영역</p>
+      </div>
+      <div id="link2" class="container tab-pane fade">
+        <h3>Link2</h3>
+        <p>Link2 클릭 시 화면에 표시될 영역</p>
+      </div>
+    </div>
+    
+  </div>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

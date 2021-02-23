@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      $("#btnCollapse").on("click", function() {
+        $(".col3").slideToggle();
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <div class="container">
+    <h3>collapse 사용하기</h3>
+    <!-- 버튼 태그에 사용자 속성 data-toggle="collapse" 를 사용하고 사용자 속성 data-target="#접을 태그 id명" 을 지정하여 사용 -->
+    <!-- button 태그 대신 a 태그도 사용이 가능함 -->
+    <!-- a 태그 사용 시 사용자 속성 data-target 대신 href 속성에 접을 태그의 id값을 입력 -->
+    <!-- 접을 대상이 되는 div 태그에 반드시 id 속성을 사용해야 하며, collapse 클래스명을 사용해야 함 -->
+    <div>
+      <button type="button" class="btn btn-primary" data-toggle="collapse" data-target="#col1">클릭</button>
+      <hr>
+      <div id="col1" class="collapse">
+        <p>헌법재판소 재판관은 정당에 가입하거나 정치에 관여할 수 없다. 평화통일정책의 수립에 관한 대통령의 자문에 응하기 위하여 민주평화통일자문회의를 둘 수 있다. 연소자의 근로는 특별한 보호를 받는다. 이 헌법공포 당시의 국회의원의 임기는 제1항에 의한 국회의 최초의 집회일 전일까지로 한다. 국가유공자·상이군경 및 전몰군경의 유가족은 법률이 정하는 바에 의하여 우선적으로 근로의 기회를 부여받는다.</p>
+      </div>
+    </div>
+
+    <div>
+      <a href="#col2" class="btn btn-primary" data-toggle="collapse">클릭</a>
+      <hr>
+      <div id="col2" class="collapse">
+        <p>헌법재판소 재판관은 정당에 가입하거나 정치에 관여할 수 없다. 평화통일정책의 수립에 관한 대통령의 자문에 응하기 위하여 민주평화통일자문회의를 둘 수 있다. 연소자의 근로는 특별한 보호를 받는다. 이 헌법공포 당시의 국회의원의 임기는 제1항에 의한 국회의 최초의 집회일 전일까지로 한다. 국가유공자·상이군경 및 전몰군경의 유가족은 법률이 정하는 바에 의하여 우선적으로 근로의 기회를 부여받는다.</p>
+      </div>
+    </div>
+    <div>
+      <button type="button" class="btn btn-primary" id="btnCollapse">클릭</button>
+      <hr>
+      <div class="col3" style="display:none">
+        <p>헌법재판소 재판관은 정당에 가입하거나 정치에 관여할 수 없다. 평화통일정책의 수립에 관한 대통령의 자문에 응하기 위하여 민주평화통일자문회의를 둘 수 있다. 연소자의 근로는 특별한 보호를 받는다. 이 헌법공포 당시의 국회의원의 임기는 제1항에 의한 국회의 최초의 집회일 전일까지로 한다. 국가유공자·상이군경 및 전몰군경의 유가족은 법률이 정하는 바에 의하여 우선적으로 근로의 기회를 부여받는다.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="container">
+    <h3>아코디언 사용하기</h3>
+    <!-- collapse 의 발전된 UI 형태로 부모 태그로 div 를 사용하고 accordion id를 사용 -->
+    <!-- 자식 태그로 card 를 사용하여 클릭 시 접혔다가 펴지는 콘텐츠 부분을 표시함 -->
+    
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header">
+          <a href="#aco1" class="card-link" data-toggle="collapse">아코디언 1번 컨텐츠</a>
+        </div>
+        <div id="aco1" class="collapse show" data-parent="#accordion">
+          <div class="card-body">
+            <p class="card-text">아코디언을 사용하여 접었다폈다하는 컨텐츠 영역 1번</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a href="#aco2" class="card-link" data-toggle="collapse">아코디언 2번 컨텐츠</a>
+        </div>
+        <div id="aco2" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <p class="card-text">아코디언을 사용하여 접었다폈다하는 컨텐츠 영역 2번</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <a href="#aco3" class="card-link" data-toggle="collapse">아코디언 3번 컨텐츠</a>
+        </div>
+        <div id="aco3" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+            <p class="card-text">아코디언을 사용하여 접었다폈다하는 컨텐츠 영역 3번</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
