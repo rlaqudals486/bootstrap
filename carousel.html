@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</head>
+<body>
+    
+    <!-- 캐러셀은 이미지 슬라이드 -->
+    <!-- 이미지 슬라이드를 진행할 공간을 div로 선언하고, carousel slide 클래스를 추가하여 사용, 반드시 id가 존재해야 함 -->
+    <!-- 이미지 전환 방식에 따라서 carousel-fade fade 추가하여 사용 -->
+    <!-- 사용자 속성인 data-ride-"carousel" 을 추가함 -->
+    
+    <!-- 캐러셀은 3가지 영역으로 나누어짐 -->
+    <!-- 인디케이터 부분 : ul, li 태그를 사용, ul 태그에 carousel-indicators 클래스를 추가 -->
+    <!-- li 태그에는 사용자 속성인 data-target = "캐러셀 영역 id" 를 사용 -->
+    <!-- data-slide-to = "순번" 을 사용하여 몇번째 위치인지 화면에 표시, active 클래스를 사용하여 현재 표시되고 있는 이미지의 순번을 표시 -->
+
+    <!-- 슬라이드쇼 부분 : 실제 이미지를 표시하는 영역 -->
+
+    <!-- 컨트롤러 부분 : 사용자의 마우스 클릭에 의해서 이전 이미지 혹은 다음 이미지를 출력하게 컨트롤할 수 있는 버튼 부분 -->
+    <!-- a 태그와 span을 사용해서 화살표 부분을 이미지 위에 표시 -->
+    <!-- a 태그에 carousel-control-prev, carousel-control-next 클래스를 사용하고, 사용자 속성인 data-slide = "prev", "next" 를 사용함 -->
+    <!-- span 태그에는 carousel-control-prev-icon, carousel-control-next-icon을 사용 -->
+
+    <div class="container">
+        <div id="imgslider" class="carousel slide carousel-fade" data-ride="carousel">
+            <!-- 인디케이터 -->
+            <ul class="carousel-indicators">
+                <!-- 인디케이터의 수는 슬라이드 할 이미지의 수 -->
+                <li data-target="#imgslider" data-slide-to = "0" class="active"></li>
+                <li data-target="#imgslider" data-slide-to = "1"></li>
+                <li data-target="#imgslider" data-slide-to = "2"></li>
+            </ul>
+
+            <!-- 슬라이드 쇼 -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../image/중성마녀1.jpg" alt="" style="width: 100%;">
+                    <div class="carousel-caption">
+                        <h4>마카오&조마</h4>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="../image/중성마녀2.jpg" alt="" style="width: 100%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="../image/중성마녀3.jpg" alt="" style="width: 100%;">
+                </div>  
+
+                <!-- 컨트롤 -->
+                <a href="#imgslider" class="carousel-control-prev" data-slide = "prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a href="#imgslider" class="carousel-control-next" data-slide = "next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

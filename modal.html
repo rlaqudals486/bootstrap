@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</head>
+<body>
+    <!-- 모달창은 현재 페이지 상단에 표시되는 팝업창 -->
+    <!-- 현재 페이지에서 평상시에는 숨겨져 있다가 이벤트 발생 시 화면에 표시하는 방식 -->
+    <!-- div 태그에 modal 클래스를 추가하고, id도 선언하여 사용 -->
+    <!-- 주로 button에 사용자속성 data-toggle="modal", data-target="모달영역 id값"을 선언하여 사용함 -->
+    <!-- modal을 사용한 태그의 자식 태그로 modal-dialog 클래스를 사용한 div 태그가 존재하며, 그 아래에 modal-content 클래스를 사용한 div 태그가 존재함 -->
+    <!-- modal-content는 moadl-header, modal-body, modal-footer 클래스를 사용한 div 태그를 가지고 있음 -->
+    <!-- modal 클래스에 fade 클래스를 추가하면 애니메이션 효과가 발생함 -->
+    <!-- modal-dialog 뒤에 modal-sm. modal-lg, modal-xl 클래스를 추가하면 모달창의 크기를 변경할 수 있음 -->
+    <!-- modal-dialog 뒤에 modal-dialog-centered 를 사용하면 화면 정중앙에 출력되는 모달창을 사용할 수 있음 -->
+    <!-- modal-dialog 뒤에 modal-dialog-scrollable; -->
+    <!-- modal-dialog 뒤에 modal-dialog-scrollable을 사용하면 모달창보다 컨텐츠의 크기가 클 경우 스크롤바가 생성되어 스크롤을 사용할 수 있음 -->
+
+    <div>
+        <h3>기본 모달창</h3>
+        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#moadl1">모달창 열기</button>
+
+        <div class="modal fade" id="moadl1">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">모달창 헤더 영역</h4>
+                        <button class="close" type="button" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <h4>모달창 바디 영역</h4>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-danger" type="button" data-dismiss="modal">닫기</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div>
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal2">모달창 열기</button>
+            <div class="modal fade" id="modal2">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4>정중앙에 표시되는 모달창</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            모달창 화면에 출력
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h3>스크롤이 없는 모달창</h3>
+
+            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#modal3">스크롤이 없는 모달창 열기</button>
+            <div class="modal" id="modal3">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title">스크롤 없는 모달창</h1>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>하나둘
+                                기억에서 삭제했지
+                                너의 온기 너의 손길
+                                널 머리에서 빼냈지
+                                너의 눈빛 너의 향기
+                                마음을 전부 꿰맸지 난
+                                너란 보물 놓친 후엔
+                                사라진 마음에 jealousy
+                                너 아니면 다 안 느껴져
+                                난 이젠 I can't feel merlot
+                                우리 사랑은 시작보다 끝이 달콤하다는 결론
+                                너란 향에 빠져 삭제한 기억이 다시 떠올라
+                                시간은 계속해서 가 거꾸로
+                                우리 이별 어느 것보다
+                                짜릿하게 섞어서 마셔
+                                많이 독한 거로
+                                이젠 둘보단 하나가 익숙하지
+                                어디서든 alone
+                                그대 입술은 아파요
+                                그대 이름도 너무 아파요
+                                그대의 눈빛이 너무 나빠요
+                                이별이 어떻게 그리 간단해요
+                                You are my merlot merlot merlot
+                                아무것도 정말 넌 몰라요
+                                You are my merlot merlot merlot
+                                쓰디쓴 사랑도 달콤해져서
+                                이러는지 몰라요
+                                기억에서 삭제했지
+                                너의 온기 너의 손길
+                                널 머리에서 빼냈지
+                                너의 눈빛 너의 향기
+                                마음을 전부 꿰맸지 난
+                                너란 보물 놓친 후엔
+                                사라진 마음에 jealousy
+                                너 아니면 다 안 느껴져
+                                난 이젠 I can't feel merlot
+                                안 봐도 뻔해 너 없인 없네
+                                괜찮은 척해
+                                지독한 향기 내게는 달콤한데
+                                시간을 돌려도 널 만나러 간대
+                                스며들어있어 every time I breathe
+                                가끔은 내 생각하는지
+                                달콤한 기억으로 남길
+                                You are my poison my toxic
+                                그대 입술은 아파요
+                                그대 이름도 너무 아파요
+                                그대의 눈빛이 너무 나빠요
+                                이별이 어떻게 그리 간단해요
+                                You are my merlot merlot merlot
+                                아무것도 정말 넌 몰라요
+                                You are my merlot merlot merlot
+                                쓰디쓴 사랑도 달콤해져서
+                                이러는지 몰라요</p>
+
+                                <p>
+                                    [Verse 1]
+아직도 마음이 아픈이유는 왜일까?
+상처만 남은건 못잡아서인가...
+그저내일만 바라봤고
+그래서 오늘의 너에게 잘 못해줘 후회된다
+너무나도 서로 다른 너와나이기에
+애초에 만나는게 아니였어
+서랍을 열었더니 식은사랑밖에 이젠
+안보여 너없으니 아무도없어
+별거아닌게 뜻깊어 내겐
+니가 내곁에만 서있서도 매번
+제대로 말못한 내가 한심해보여
+표현이 서툴러서, 다가가지를 못했던
+지금 너와의 추억들 난 아직 간직해놔
+사랑 다 식기전까진 절대 못내놔
+가끔 서랍을 치우려했던 생각들
+버리기전에 니가보여서, 버리지 못해 난
+
+[Chorus]
+너와 함께일, 우리 같이한 일
+모든게 이서랍에 있어서
+우리 추억거리, 우리 사랑들이
+다 이서랍안에 있어서
+So baby I can't leave you, I can't be alone
+So baby I can't leave you, I can't be alone
+So baby I can't leave you, I can't be alone
+너 오기전까진 이서랍은 그대로
+
+[Verse 2]
+아직도 마음이 아픈이유는 왜일까?
+상처만 남은건 못잡아서인가...
+그저내일만 바라봤고
+그래서 오늘의 너에게 잘 못해줘 후회된다
+아쉬움만 남아 더잘해줄껄그랬어
+가끔 난 미치도록 니가 보고싶어
+그래서 지금은 못줘, 우리 추억들
+사랑들 다 서랍안에서 못꺼내겠어
+우리...정말이야, 왜 이래야되는거야
+누구좋은가봐..너도 나와똑같잖아..?
+때론 니가보고싶을땐 서랍을열어
+너의 사진 ..아니.. 우리사진들보며
+옛추억을 생각하는데 왜 눈물이나는지
+남자라는새끼가 가지가지 하지
+정신차려야하는데 현실이무서워
+너없는 세상 살기가 두려워
+
+[Chorus]
+너와 함께일, 우리 같이한 일
+모든게 이서랍에 있어서
+우리 추억거리, 우리 사랑들이
+다 이서랍안에 있어서
+So baby I can't leave you, I can't be alone
+So baby I can't leave you, I can't be alone
+So baby I can't leave you, I can't be alone
+너 오기전까진 이서랍은 그대로
+                                </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>스크롤이 있는 모달창</h3>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#modal4">스크롤이 있는 모달창 열기</button>
+            <div class="modal" id="modal4">
+                <div class="modal-dialog modal-dialog-center modal-dialog-scrollable">
+                    <div modal-conetnt>
+                        <div class="modal-header">
+                            <h1 class="modal-title">스크롤이 있는 모달창</h1>
+                            <button class="close" type="button" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>하나둘
+                                기억에서 삭제했지
+                                너의 온기 너의 손길
+                                널 머리에서 빼냈지
+                                너의 눈빛 너의 향기
+                                마음을 전부 꿰맸지 난
+                                너란 보물 놓친 후엔
+                                사라진 마음에 jealousy
+                                너 아니면 다 안 느껴져
+                                난 이젠 I can't feel merlot
+                                우리 사랑은 시작보다 끝이 달콤하다는 결론
+                                너란 향에 빠져 삭제한 기억이 다시 떠올라
+                                시간은 계속해서 가 거꾸로
+                                우리 이별 어느 것보다
+                                짜릿하게 섞어서 마셔
+                                많이 독한 거로
+                                이젠 둘보단 하나가 익숙하지
+                                어디서든 alone
+                                그대 입술은 아파요
+                                그대 이름도 너무 아파요
+                                그대의 눈빛이 너무 나빠요
+                                이별이 어떻게 그리 간단해요
+                                You are my merlot merlot merlot
+                                아무것도 정말 넌 몰라요
+                                You are my merlot merlot merlot
+                                쓰디쓴 사랑도 달콤해져서
+                                이러는지 몰라요
+                                기억에서 삭제했지
+                                너의 온기 너의 손길
+                                널 머리에서 빼냈지
+                                너의 눈빛 너의 향기
+                                마음을 전부 꿰맸지 난
+                                너란 보물 놓친 후엔
+                                사라진 마음에 jealousy
+                                너 아니면 다 안 느껴져
+                                난 이젠 I can't feel merlot
+                                안 봐도 뻔해 너 없인 없네
+                                괜찮은 척해
+                                지독한 향기 내게는 달콤한데
+                                시간을 돌려도 널 만나러 간대
+                                스며들어있어 every time I breathe
+                                가끔은 내 생각하는지
+                                달콤한 기억으로 남길
+                                You are my poison my toxic
+                                그대 입술은 아파요
+                                그대 이름도 너무 아파요
+                                그대의 눈빛이 너무 나빠요
+                                이별이 어떻게 그리 간단해요
+                                You are my merlot merlot merlot
+                                아무것도 정말 넌 몰라요
+                                You are my merlot merlot merlot
+                                쓰디쓴 사랑도 달콤해져서
+                                이러는지 몰라요</p>
+
+                                <p>
+                                    [Verse 1]
+아직도 마음이 아픈이유는 왜일까?
+상처만 남은건 못잡아서인가...
+그저내일만 바라봤고
+그래서 오늘의 너에게 잘 못해줘 후회된다
+너무나도 서로 다른 너와나이기에
+애초에 만나는게 아니였어
+서랍을 열었더니 식은사랑밖에 이젠
+안보여 너없으니 아무도없어
+별거아닌게 뜻깊어 내겐
+니가 내곁에만 서있서도 매번
+제대로 말못한 내가 한심해보여
+표현이 서툴러서, 다가가지를 못했던
+지금 너와의 추억들 난 아직 간직해놔
+사랑 다 식기전까진 절대 못내놔
+가끔 서랍을 치우려했던 생각들
+버리기전에 니가보여서, 버리지 못해 난
+
+[Chorus]
+너와 함께일, 우리 같이한 일
+모든게 이서랍에 있어서
+우리 추억거리, 우리 사랑들이
+다 이서랍안에 있어서
+So baby I can't leave you, I can't be alone
+So baby I can't leave you, I can't be alone
+So baby I can't leave you, I can't be alone
+너 오기전까진 이서랍은 그대로
+
+[Verse 2]
+아직도 마음이 아픈이유는 왜일까?
+상처만 남은건 못잡아서인가...
+그저내일만 바라봤고
+그래서 오늘의 너에게 잘 못해줘 후회된다
+아쉬움만 남아 더잘해줄껄그랬어
+가끔 난 미치도록 니가 보고싶어
+그래서 지금은 못줘, 우리 추억들
+사랑들 다 서랍안에서 못꺼내겠어
+우리...정말이야, 왜 이래야되는거야
+누구좋은가봐..너도 나와똑같잖아..?
+때론 니가보고싶을땐 서랍을열어
+너의 사진 ..아니.. 우리사진들보며
+옛추억을 생각하는데 왜 눈물이나는지
+남자라는새끼가 가지가지 하지
+정신차려야하는데 현실이무서워
+너없는 세상 살기가 두려워
+
+[Chorus]
+너와 함께일, 우리 같이한 일
+모든게 이서랍에 있어서
+우리 추억거리, 우리 사랑들이
+다 이서랍안에 있어서
+So baby I can't leave you, I can't be alone
+So baby I can't leave you, I can't be alone
+So baby I can't leave you, I can't be alone
+너 오기전까진 이서랍은 그대로
+                                </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">닫기</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

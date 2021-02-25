@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+    <style>
+        #div01 > span, #div02 > span, #div03 > span {
+            display : inline-block;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+
+        #div03 > span {
+            background-color: lightgray;
+        }
+
+        #div04 > .nobs > img {
+            float: left;
+        }
+
+        #div04 > .nobs > p {
+            float: right;
+        }
+
+        #div04 > .nobs::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <!-- border 클래스를 추가 시 해당 태그의 테두리 선을 부트스트랩에서 미리 디자인된 형태로 표시함 -->
+    <!-- border(테두리선 사용), border-0(테두리선 없음), border-방향-0(해당 방향에 테두리선 없음) -->
+    <div id="div01">
+        <span class="border"></span>
+        <span class="border border-0"></span>
+        <span class="border border-top-0"></span>
+        <span class="border border-right-0"></span>
+        <span class="border border-bottom-0"></span>
+        <span class="border border-left-0"></span>
+    </div>
+    <hr>
+    <div id="div02">
+        <span class="border border-primary"></span>
+        <span class="border border-secondary"></span>
+        <span class="border border-success"></span>
+        <span class="border border-info"></span>
+        <span class="border border-warning"></span>
+        <span class="border border-danger"></span>
+        <span class="border border-dark"></span>
+        <span class="border border-light"></span>
+        <span class="border border-white"></span>
+    </div>
+    <hr>
+    <div id="div03">
+        <h3>rounded 사용</h3>
+    <!-- rounded는 사각형의 모서리를 라운드 처리 -->
+    <!-- rounded(기본), rounded-sm(작은 모서리), rounded-lg(큰 모서리), rounded-방향 (해당 방향의 모서리만 라운드 처리), rounded-circle(원형), rounded-0(라운드처리 없음) -->
+        <span class="rounded-0"></span>
+        <span class="rounded-sm"></span>
+        <span class="rounded"></span>
+        <span class="rounded-lg"></span>
+        <span class="rounded-top"></span>
+        <span class="rounded-right"></span>
+        <span class="rounded-bottom"></span>
+        <span class="rounded-left"></span>
+        <span class="rounded-circle"></span>
+    </div>
+
+    <br><hr><br>
+    
+    <div id="div04">
+        <h3>float,clearfix</h3>
+        <!-- 부모 태그인 div에 clearfix 클래스를 사용하고, 자식 태그에 float-left, float-right 를 사용하여 css의 float을 쉽게 사용함 -->
+
+        <div class="nobs">
+            <img src="../image/중성마녀4.jpg" alt="" width="300px">
+            <p>중성마녀 입니다.</p>
+        </div>
+        <div class="cleafix">
+            <img src="../image/중성마녀2.jpg" alt="" class="float-left">
+            <p class="float-right">중성마녀 입니다.</p>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+    <hr>
+    <h3>반응형 float</h3>
+    <!-- float 크기-left, right 를 사용하면 float이 반응형웹이 적용 됨 -->
+    <!-- float-none 사용 시 float 을 사용하지 않음 -->
+    <div class="clearfix border border-danger">
+        <div class="float-sm-right">576px 이상일 경우 float-right</div><br>
+        <div class="float-md-right">768px 이상일 경우 float-right</div><br>
+        <div class="float-lg-right">992px 이상일 경우 float-right</div><br>
+        <div class="float-xl-right">1200px 이상일 경우 float-right</div><br>
+        <div class="float-none">float none</div>
+    </div>
+
+    <div id="div05">
+        <h3>중앙 정렬</h3>
+        <!-- margin-left, margin-right의 값을 auto로 주면 중앙정렬 되는 것을 부트스트랩의 mx-auto 클래스로 사용할 수 있음 -->
+        <div class="bg-warning mx-auto" style="width: 200px;">중앙 정렬하기</div>
+        <hr>
+        <h3>부트스트랩 기본 너비, 높이</h3>
+        <!-- 일반 CSS에서 자주 사용하는 너비 및 높이의 크기인 25, 50, 75, 100을 부트스트랩에서 지정해 놓음 -->
+        <!-- w-25, w-50, w-75, w-100, h-25, h-75, h-100 으로 지정해 놓음 -->
+        <!-- max-width: 100%, max-height:100%를 mw-100, mh-100 으로 지정해 놓음 -->
+
+        <div>
+            <div class="w-25 bg-warning">width 25%</div>
+            <div class="w-50 bg-warning">width 50%</div>
+            <div class="w-75 bg-warning">width 75%</div>
+            <div class="w-100 bg-warning">width 100%</div>
+            <div class="mw-100 bg-warning">max-width 25%</div>
+        </div>
+        <hr>
+        <div class="bg-dark" style="height: 300px;">
+            <div class="h-25 d-inline-block p-2 bg-warning">height 25%</div>
+            <div class="h-50 d-inline-block p-2 bg-warning">height 50%</div>
+            <div class="h-75 d-inline-block p-2 bg-warning">height 75%</div>
+            <div class="h-100 d-inline-block p-2 bg-warning">height 100%</div>
+            <div class="mh-100 d-inline-block p-2 bg-warning">max-height 100%</div>
+        </div>
+
+        <div>
+            <!-- 부트스트랩에서 반응형웹의 크기를 나타내는 명칭은 sx(576미만), sm(576이상), md(768이상), lg(992이상), xl(1200이상) 임 -->
+
+            <!-- m : maring을 뜻함 -->
+            <!-- p : padding을 뜻함 -->
+            <!-- t : top -->
+            <!-- b : bottom -->
+            <!-- r : right -->
+            <!-- l : left -->
+            <!-- x : left, right 둘다 -->
+            <!-- y : top, bottom 둘다 -->
+
+            <!-- 크기를 나타내는 기호 (기본값이 16px일 경우) -->
+            <!-- 0 : 0px -->
+            <!-- 1 : 0.25rem, 4px -->
+            <!-- 2 : 0.5rem, 8px -->
+            <!-- 3 : 1rem, 16px -->
+            <!-- 4 : 1.5rem, 24px -->
+            <!-- 5 : 3rem, 48px -->
+            <!-- auto : 자동 설정 -->
+
+            <!-- 사용 방법 -->
+            <!-- [속성기호][방향]-[반응형크기]-[픽셀크기] -->
+            <!-- 방향, 반응형크기 는 제외할 수 있음 -->
+            <!-- 방향이 없을 경우 모든 방향을 뜻함 -->
+            <!-- 반응형크기가 없을 경우 모든 반응형 크기에서 다 사용 -->
+        </div>
+
+        <div id="div06">
+            <h3>shadow 사용</h3>
+            <!-- css의 box-shadow 효과를 적용 -->
+            <!-- shadow-none(그림자 없음), shadow-sm(작은 그림자), shadow(기본), shadow-lg(큰 그림자) -->
+            <div class="shadow-none p-4 mb-4 bg-dark">그림자 없음</div>
+            <div class="shadow-sm p-4 mb-4 bg-light">작은 그림자</div>
+            <div class="shadow p-4 mb-4 bg-light">기본 그림자</div>
+            <div class="shadow-lg p-4 mb-4 bg-light">큰 그림자</div>
+        </div>
+    </div>
+</body>
+</html>

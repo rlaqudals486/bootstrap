@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+    <style>
+        html {
+            scroll-behavior : smooth;
+        }
+
+        body {
+            position: relative;
+        }
+        
+
+        #sec1, #sec2, #sec3, #sec41, #sec42 {
+            padding-top: 70px;
+            padding-bottom: 70px;
+            margin: 1000px;
+        }
+
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+    <!-- scrollspy 는 사용자가 보고 있는 화면의 위치에 따라 네비게이션바의 위치도 함께 변경되는 UI를 뜻함 -->
+    <!-- body 태그에 사용자 속성 data-spy="scroll", data-target=".navbar", data-offset=50 을 사용 -->
+    <!-- data-spy="scroll" 은 scrollspy 를 사용하겠다는 의미 -->
+    <!-- data-target=".navbar" 는 스크롤스파이와 연동할 메뉴를 선택 -->
+    <!-- data-offset = 50 은 스크롤 스파이를 사용하면 좌표 위치를 0부터 사용하기 때문에 네비게이션바의 높이의 영향으로 가려지는 부분이 발생하여 스크롤 스파이의 위치를 50px 정도 아래로 내림 -->
+    <!-- div로 이동할 영역의 id를 설정, 네비게이션바의 메뉴수와 동일하게 맞춤 -->
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">   
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#sec1" class="nav-link">영역1</a></li>
+            <li class="nav-item"><a href="#sec2" class="nav-link">영역2</a></li>
+            <li class="nav-item"><a href="#sec3" class="nav-link">영역3</a></li>
+            <li class="nav-item dropdown">
+                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">영역4</a>
+                <div class="dropdown-menu">
+                    <a href="#sec41" class="dropdown-item">영역4-1</a>
+                    <a href="#sec42" class="dropdown-item">영역4-2</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div id="sec1" class="container-fluid bg-success">
+        <h1>영역 1</h1>
+        <p>시와 아스라히 하나에 하늘에는 있습니다. 이름을 나는 위에 했던 잠, 별을 가을로 까닭입니다. 가득 된 옥 계십니다. 이런 노루, 가득 우는 버리었습니다. 못 밤이 위에 까닭입니다. 잠, 하나에 이름자를 별들을 밤을 하나의 봄이 이 별빛이 버리었습니다. 가득 다 밤이 이름과, 밤을 까닭입니다. 나의 부끄러운 하나에 있습니다. 어머니 이런 속의 하늘에는 별을 무엇인지 있습니다. 불러 쉬이 차 이름과 듯합니다. 아침이 다 된 옥 별 하나에 오면 둘 까닭입니다.</p>
+    </div>
+    <div id="sec2" class="container-fluid bg-warning">
+        <h1>영역2</h1>
+        <p>별에도 멀리 이름을 있습니다. 하나에 노새, 한 프랑시스 계십니다. 아스라히 가난한 잔디가 토끼, 이름자 듯합니다. 마리아 나의 어머니, 까닭입니다. 피어나듯이 새워 가을로 이름을 계집애들의 북간도에 있습니다. 위에 별빛이 하나에 흙으로 하나 이름을 부끄러운 봅니다. 피어나듯이 이름과, 속의 이 아이들의 많은 가슴속에 겨울이 까닭입니다. 소녀들의 나는 이국 무엇인지 벌레는 사랑과 있습니다. 하나에 애기 하나에 패, 봅니다. 불러 같이 별 이름과 있습니다.</p>
+    </div>
+    <div id="sec3" class="container-fluid bg-info">
+        <h1>영역3</h1>
+        <p>하나에 별빛이 이름자를 언덕 이름을 불러 부끄러운 까닭입니다. 이름과, 나는 내 그러나 까닭입니다. 소녀들의 별 가을 새겨지는 버리었습니다. 써 별을 그리고 봄이 이름을 슬퍼하는 이름을 버리었습니다. 이름과, 풀이 부끄러운 봄이 너무나 동경과 별을 사랑과 이네들은 있습니다. 이름을 언덕 이름과, 까닭입니다. 북간도에 사랑과 언덕 하나에 경, 이름과 노루, 거외다. 벌레는 시인의 별 있습니다. 별 다 멀리 별 나는 추억과 오면 나는 봅니다.</p>
+    </div>
+    <div id="sec41" class="container-fluid bg-success">
+        <h1>영역4-1</h1>
+        <p>가슴속에 소녀들의 속의 노루, 하나에 된 봅니다. 걱정도 하나에 별이 듯합니다. 헤일 하나에 사랑과 있습니다. 했던 내 된 오면 별 하나 패, 지나고 있습니다. 이웃 아직 프랑시스 쉬이 이제 그러나 봅니다. 지나가는 이름을 이런 다하지 된 별 아침이 밤을 버리었습니다. 별을 이름과, 헤일 가난한 봅니다. 청춘이 이름자 릴케 잔디가 그리고 동경과 많은 있습니다. 내 어머니, 흙으로 하나에 사랑과 멀리 까닭이요, 이름과, 버리었습니다. 아침이 패, 시와 별들을 봅니다.</p>
+    </div>
+    <div id="sec42" class="container-fluid bg-danger">
+        <h1>영역4-2</h1>
+        <p>이웃 계절이 가난한 하나에 무엇인지 말 봅니다. 이제 나는 된 피어나듯이 말 거외다. 쓸쓸함과 가을로 이제 별이 된 무엇인지 까닭입니다. 이름을 어머님, 별 걱정도 버리었습니다. 별 가슴속에 이네들은 다 가난한 있습니다. 잠, 하나 소학교 슬퍼하는 까닭입니다. 하나에 내 그러나 시와 헤일 별을 거외다. 무덤 소녀들의 이런 별 걱정도 까닭이요, 하나 이름과, 봅니다. 옥 슬퍼하는 가을 아직 별이 차 토끼, 봅니다.</p>
+    </div>
+</body>
+</html>
