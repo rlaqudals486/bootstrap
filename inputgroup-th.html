@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="./css/bootstrap.css">
+  <script src="./js/jquery-3.5.1.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h3>input group</h3>
+    <!-- form-group 대신 input-group를 사용 시 input 태그의 모양을 변경한 수 있음 -->
+    <!-- div에 input-group 클래스를 사용하고 자식 태그로 div과 input를 사용할 경우 div와 input 태그가 합쳐진 형태의 input를 화면에 출력이 가능함 -->
+    <!-- 자식 태그인 div 에 input-group-prepend, input-group-append를 사용하고, 해당 div의 자식 태그로 span, checkbox, button을 추가하여 하나로 연결된 input태그를 사용할 수 있음 -->
+    <!-- input-group-prepend, input-group-append 의 자식 태그로 사용한 태그에서 텍스트 표현시 input-group-text를 사용 -->
+    <!-- input-group-text를 여러개 사용 가능 -->
+    
+    <form action="">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text">@</span>
+        </div>
+        <input type="text" class="form-control" id="email1" name="email1" placeholder="이메일을 입력하세요">
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="email2" name="email2" placeholder="이메일을 입력하세요">
+        <div class="input-group-append">
+          <span class="input-group-text">@google.com</span>
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="email2" name="email2" placeholder="이메일을 입력하세요">
+        <div class="input-group-append">
+          <span class="input-group-text">1</span>
+          <span class="input-group-text">2</span>
+          <span class="input-group-text">3</span>
+        </div>
+      </div>
+      <!-- input-group-prepend, input-group-append의 자식 태그로 span 대신 div를 사용하고 input-group-text 클래스를 사용하면 자식 태그로 checkbox, radio를 사용할 수 있음 -->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" name="check1">
+          </div>
+        </div>
+        <input type="text" class="form-control" placeholder="텍스트를 입력하세요">
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="텍스트를 입력하세요">
+        <div class="input-group-append">
+          <div class="input-group-text">
+            <input type="radio">
+          </div>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-primary" type="button">검색</button>
+        </div>
+        <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+      </div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="id를 입력하세요">
+        <div class="input-group-append">
+          <button class="btn btn-outline-success">검색</button>
+          <button class="btn btn-secondary">취소</button>
+        </div>
+      </div>
+      <!-- 드랍다운 버튼을 사용한 input-group -->
+      <!-- input-group-prepend, input-group-append의 자식 태그로 dropdown 클래스를 사용한 div를 사용하지 않고 바로 버튼과 dropdown-menu를 사용한 div를 추가함 -->
+      <!-- input-group-prepend 클래스가 dropdown 클래스를 사용한 div의 역활을 함 -->
+      <div class="input-group mb-4">
+        <div class="input-group-prepend">
+          <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown">드랍다운버튼</button>
+          <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">링크1</a>
+            <a href="#" class="dropdown-item">링크2</a>
+            <a href="#" class="dropdown-item">링크3</a>
+          </div>
+        </div>
+        <input type="text" class="form-control" placeholder="아이디..">
+      </div>
+      
+
+      <!-- input-group 사용 시 label -->
+      <!-- label과 input-group를 동시에 사용 시 input-group의 자식태그인 input 태그의 id를 label태그의 for속성값과 동일하게 설정 -->
+      <label for="email5">이메일 : </label>
+      <div class="input-group">
+        <input type="email" class="form-control" id="email5" name="email5" placeholder="이메일을 입력해주세요">
+        <div class="input-group-append">
+          <span class="input-group-text">@naver.com</span>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" type="submit">전송</button>
+    </form>
+  </div>
+
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+    <style>
+        .flex-container {
+            display: flex;
+            padding: 16px;
+            color: white;
+            background-color: darkgray;
+        }
+
+        .flex-container > div {
+            padding: 8px;
+            margin: 16px;
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- flex는 css3에서 화면 layout을 제어하기 위한 속성 -->
+    <!-- 부트스트랩4 부터는 화면 제어에 flexbox를 사용함 -->
+    <!-- d-flex 클래스를 사용하여 css에서 dispaly: flex 로 설정한 것과 동일하게 사용이 가능 -->
+    <h3>부트스트랩에서 flexbox 사용</h3>
+
+    <div id="div01" class="flex-container">
+        <div>flex item 1</div>
+        <div>flex item 2</div>
+        <div>flex item 3</div>
+    </div>
+
+    <div class="d-flex bg-secondary text-white p-3">
+        <div class="p-2 bg-info">flex item 1</div>
+        <div class="p-2 bg-warning">flex item 2</div>
+        <div class="p-2 bg-primary">flex item 3</div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h3>flex-row 사용</h3>
+        <!-- 부모 태그에 flex-row 클래스를 추가하면 자식 태그를 가로로 정렬할 수 있음 -->
+        <!-- 부트스트랩의 flexbox는 기본이 flex-row임 -->
+        <!-- flex-row-reverse 클래스 사용 시 순서를 반대로 정렬, 오른쪽에서 왼쪽으로 정렬 -->
+
+        <div class="d-flex flex-row bg-secondary mb-3">
+            <div class="p-2 bg-info">플렉스박스 아이템 1</div>
+            <div class='p-2 bg-warning'>플렉스박스 아이템 2</div>
+            <div class="p-2 bg-primary">플렉스박스 아이템 3</div>
+        </div>
+
+        <div class="d-flex flex-row-reverse bg-secondary">
+            <div class="p-2 bg-info">플렉스박스 아이템 1</div>
+            <div class='p-2 bg-warning'>플렉스박스 아이템 2</div>
+            <div class="p-2 bg-primary">플렉스박스 아이템 3</div>
+        </div>
+
+        <div class="container">
+            <h3>수직 방향 사용</h3>
+            <!-- 부모 태그에 flex-column, flex-column-reverse 사용 시 자식 태그가 수직 정렬 됨 -->
+
+            <div class="d-flex flex-column mb-3">
+                <div class="p-2 bg-info">flex item 1</div>
+                <div class="p-2 bg-warning">flex item 2</div>
+                <div class="p-2 bg-primary">flex item 3</div>
+            </div>
+            
+            <div class="d-flex flex-column-reverse mb-3">
+                <div class="p-2 bg-info">flex item 1</div>
+                <div class="p-2 bg-warning">flex item 2</div>
+                <div class="p-2 bg-primary">flex item 3</div>
+            </div>
+        </div>
+
+        <br><hr><br>
+
+        <div class="conatienr">
+            <div>
+                <h3>컨텐츠 정렬</h3>
+                <!-- justify-content-[정렬방법] 형태로 사용 -->
+                <!-- start(왼쪽), center(증앙), end(오른쪽), between(양쪽정렬, 양쪽끝에 여백 없음), around(양쪽정렬, 양쪽끝에 여백 있음) -->
+
+                <h4>start 사용</h4>
+                <div class="d-flex justify-content-start bg-seocndary mb-3">
+                    <div class="p-2 bg-info">flex item 1</div>
+                    <div class="p-2 bg-warning">flex item 2</div>
+                    <div class="p-2 bg-primary">flex item 3</div>
+                </div>
+                <h4>center 사용</h4>
+                <div class="d-flex justify-content-center bg-secondary mb-3">
+                    <div class="p-2 bg-info">flex item 1</div>
+                    <div class="p-2 bg-warning">flex item 2</div>
+                    <div class="p-2 bg-primary">flex item 3</div>
+                </div>
+                <h4>end 사용</h4>
+                <div class="d-flex justify-content-end bg-secondary mb-3">
+                    <div class="p-2 bg-info">flex item 1</div>
+                    <div class="p-2 bg-warning">flex item 2</div>
+                    <div class="p-2 bg-primary">flex item 3</div>
+                </div>
+                <h4>between 사용</h4>
+                <div class="d-flex justify-content-between bg-secondary mb-3">
+                    <div class="p-2 bg-info">flex item 1</div>
+                    <div class="p-2 bg-warning">flex item 2</div>
+                    <div class="p-2 bg-primary">flex item 3</div>
+                </div>
+                <h4>around 사용</h4>
+                <div class="d-flex justify-content-around bg-secondary mb-3">
+                    <div class="p-2 bg-info">flex item 1</div>
+                    <div class="p-2 bg-warning">flex item 2</div>
+                    <div class="p-2 bg-primary">flex item 3</div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div>
+            <h3>flex-fill 자식 태그의 크기를 동일하게 설정</h3>
+            <!-- flex-fill 클래스를 자식 태그에서 사용 -->
+            <!-- flex-fill 클래스를 사용한 태그끼리 크기를 동일하게 자동 조절함 -->
+
+            <h4>flex-fill 사용</h4>
+            <div class="d-flex mb-3">
+                <div class="p-2 bg-info flex-fill">플렉스 박스 아이템1</div>
+                <div class="p-2 bg-warning flex-fill">플렉스 박스 아이템2</div>
+                <div class="p-2 bg-primary flex-fill">플렉스 박스 아이템3</div>
+                <div class="p-2 bg-success flex-fill">플렉스 박스 아이템4</div>
+            </div>
+
+            <h4>flex-fill 사용안함</h4>
+            <!-- flexbox의 자식태그의 크기는 컨텐츠의 크기에 의해서 좌우됨 -->
+            <div class="d-flex mb-3">
+                <div class="p-2 bg-info">플렉스 박스 아이템1</div>
+                <div class="p-2 bg-warning">플렉스 박스 아이템2</div>
+                <div class="p-2 bg-primary">플렉스 박스 아이템3</div>
+            </div>
+        </div>
+
+        <div>
+            <h3>flex-grow-1 사용</h3>
+            <!-- flexbox의 자식태그에 flex-grow-1 을 사용 시 부모 태그의 나머지 공간을 채움 -->
+            <!-- 여러개의 flex-grow-1을 사용시 크기를 자동 조절 -->
+            <h4>flex-grow-1 사용 안함</h4>
+            <div class="d-flex bg-secondary mb-3">
+                <div class="p-2 bg-info">플렉스 박스 아이템1</div>
+                <div class="p-2 bg-warning">플렉스 박스 아이템2</div>
+                <div class="p-2 bg-primary">플렉스 박스 아이템3</div>
+            </div>
+
+            <h4>flex-grow-1 사용</h4>
+            <div class="d-flex bg-secondary">
+                <div class="p-2 bg-info">플렉스 박스 아이템1</div>
+                <div class="p-2 bg-warning">플렉스 박스 아이템2</div>
+                <div class="p-2 bg-primary flex-grow-1">플렉스 박스 아이템3</div>
+            </div>
+
+            <br><hr><br>
+
+            <div>
+                <h3>order 사용</h3>
+                <!-- order 클래스는 자식 태그의 정렬 순서를 지정함 -->
+                <!-- 0 ~ 12번 까지의 순번이 존재함, 작은 숫자가 높은 우선순위를 가짐 -->
+                <div class="d-flex">
+                    <div class="p-2 bg-info order-5">플렉스박스 아이템 1</div>
+                    <div class="p-2 bg-warning order-3">플렉스박스 아이템 2</div>
+                    <div class="p-2 bg-primary order-1">플렉스박스 아이템 3</div>
+                    <div class="p-2 bg-success order-2">플렉스박스 아이템 4</div>
+                    <div class="p-2 bg-danger order-4">플렉스박스 아이템 5</div>
+                </div>
+            </div>
+
+            <div>
+                <h3>flex-nowrap, flex-wrap 사용</h3>
+                <!-- 컨텐츠의 자동 줄바꿈을 설정하는 클래스 -->
+                <!-- flex-nowrap(기본값, 줄바꿈 없음), flex-wrap(자동 줄바꿈, 왼쪽정렬), flex-wrap-reverse(자동 줄바꿈, 반대로 정렬) -->
+                <h4>flex-nowrap 사용</h4>
+                <div class="d-flex flex-nowrap bg-light mb-3">
+                    <div class="p-2 border">플렉스 1</div>
+                    <div class="p-2 border">플렉스 2</div>
+                    <div class="p-2 border">플렉스 3</div>
+                    <div class="p-2 border">플렉스 4</div>
+                    <div class="p-2 border">플렉스 5</div>
+                    <div class="p-2 border">플렉스 6</div>
+                    <div class="p-2 border">플렉스 7</div>
+                    <div class="p-2 border">플렉스 8</div>
+                    <div class="p-2 border">플렉스 9</div>
+                    <div class="p-2 border">플렉스 10</div>
+                    <div class="p-2 border">플렉스 11</div>
+                    <div class="p-2 border">플렉스 12</div>
+                    <div class="p-2 border">플렉스 13</div>
+                    <div class="p-2 border">플렉스 14</div>
+                    <div class="p-2 border">플렉스 15</div>
+                </div>
+
+                <h4>flex-wrap 사용</h4>
+                <div class="d-flex flex-wrap bg-light mb-3">
+                    <div class="p-2 border">플렉스 1</div>
+                    <div class="p-2 border">플렉스 2</div>
+                    <div class="p-2 border">플렉스 3</div>
+                    <div class="p-2 border">플렉스 4</div>
+                    <div class="p-2 border">플렉스 5</div>
+                    <div class="p-2 border">플렉스 6</div>
+                    <div class="p-2 border">플렉스 7</div>
+                    <div class="p-2 border">플렉스 8</div>
+                    <div class="p-2 border">플렉스 9</div>
+                    <div class="p-2 border">플렉스 10</div>
+                    <div class="p-2 border">플렉스 11</div>
+                    <div class="p-2 border">플렉스 12</div>
+                    <div class="p-2 border">플렉스 13</div>
+                    <div class="p-2 border">플렉스 14</div>
+                    <div class="p-2 border">플렉스 15</div>
+                </div>
+
+                <h4>flex-wrap-reverse 사용</h4>
+                <div class="d-flex flex-wrap-reverse bg-light">
+                    <div class="p-2 border">플렉스 1</div>
+                    <div class="p-2 border">플렉스 2</div>
+                    <div class="p-2 border">플렉스 3</div>
+                    <div class="p-2 border">플렉스 4</div>
+                    <div class="p-2 border">플렉스 5</div>
+                    <div class="p-2 border">플렉스 6</div>
+                    <div class="p-2 border">플렉스 7</div>
+                    <div class="p-2 border">플렉스 8</div>
+                    <div class="p-2 border">플렉스 9</div>
+                    <div class="p-2 border">플렉스 10</div>
+                    <div class="p-2 border">플렉스 11</div>
+                    <div class="p-2 border">플렉스 12</div>
+                    <div class="p-2 border">플렉스 13</div>
+                    <div class="p-2 border">플렉스 14</div>
+                    <div class="p-2 border">플렉스 15</div>
+                </div>
+            </div>
+
+            <br><hr><br>
+
+            <div>
+                <h3>컨텐츠 수직 정렬, align-content</h3>
+                <!-- 부모 태그에 사용하여 자식 태그의 수직 정렬을 지정하는 클래스 -->
+                <!-- align-content-[위치] -->
+                <!-- align-content-start : 기본값, 상단 정렬 -->
+                <!-- align-content-center : 중앙 정렬 -->
+                <!-- align-contetn-end : 하단 정렬 -->
+                <!-- align-content-between : 상하단 균등 정렬, 상단/하단 여백 없음 -->
+                <!-- align-content-around : 상하단 균등 정렬, 상단/하단 여백 있음 -->
+                <!-- align-content-stretch : 상하단 균등 정렬, 여백없이 높이를 채움 -->
+
+                <h4>align-content-start 사용</h4>
+                <div class="d-flex flex-wrap bg-light align-content-start" style="height: 300px;">
+                    <div class="p-2 border">플렉스 1</div>
+                    <div class="p-2 border">플렉스 2</div>
+                    <div class="p-2 border">플렉스 3</div>
+                    <div class="p-2 border">플렉스 4</div>
+                    <div class="p-2 border">플렉스 5</div>
+                    <div class="p-2 border">플렉스 6</div>
+                    <div class="p-2 border">플렉스 7</div>
+                    <div class="p-2 border">플렉스 8</div>
+                    <div class="p-2 border">플렉스 9</div>
+                    <div class="p-2 border">플렉스 10</div>
+                    <div class="p-2 border">플렉스 11</div>
+                    <div class="p-2 border">플렉스 12</div>
+                    <div class="p-2 border">플렉스 13</div>
+                    <div class="p-2 border">플렉스 14</div>
+                    <div class="p-2 border">플렉스 15</div>
+                    <div class="p-2 border">플렉스 16</div>
+                    <div class="p-2 border">플렉스 17</div>
+                    <div class="p-2 border">플렉스 18</div>
+                    <div class="p-2 border">플렉스 19</div>
+                    <div class="p-2 border">플렉스 20</div>
+                </div>
+
+                <h4>align-content-center 사용</h4>
+                <div class="d-flex flex-wrap bg-light align-content-center" style="height: 300px;">
+                    <div class="p-2 border">플렉스 1</div>
+                    <div class="p-2 border">플렉스 2</div>
+                    <div class="p-2 border">플렉스 3</div>
+                    <div class="p-2 border">플렉스 4</div>
+                    <div class="p-2 border">플렉스 5</div>
+                    <div class="p-2 border">플렉스 6</div>
+                    <div class="p-2 border">플렉스 7</div>
+                    <div class="p-2 border">플렉스 8</div>
+                    <div class="p-2 border">플렉스 9</div>
+                    <div class="p-2 border">플렉스 10</div>
+                    <div class="p-2 border">플렉스 11</div>
+                    <div class="p-2 border">플렉스 12</div>
+                    <div class="p-2 border">플렉스 13</div>
+                    <div class="p-2 border">플렉스 14</div>
+                    <div class="p-2 border">플렉스 15</div>
+                    <div class="p-2 border">플렉스 16</div>
+                    <div class="p-2 border">플렉스 17</div>
+                    <div class="p-2 border">플렉스 18</div>
+                    <div class="p-2 border">플렉스 19</div>
+                    <div class="p-2 border">플렉스 20</div>
+                </div>
+
+                <h4>align-content-end 사용</h4>
+                <div class="d-flex flex-wrap bg-light align-content-end" style="height: 300px;">
+                    <div class="p-2 border">플렉스 1</div>
+                    <div class="p-2 border">플렉스 2</div>
+                    <div class="p-2 border">플렉스 3</div>
+                    <div class="p-2 border">플렉스 4</div>
+                    <div class="p-2 border">플렉스 5</div>
+                    <div class="p-2 border">플렉스 6</div>
+                    <div class="p-2 border">플렉스 7</div>
+                    <div class="p-2 border">플렉스 8</div>
+                    <div class="p-2 border">플렉스 9</div>
+                    <div class="p-2 border">플렉스 10</div>
+                    <div class="p-2 border">플렉스 11</div>
+                    <div class="p-2 border">플렉스 12</div>
+                    <div class="p-2 border">플렉스 13</div>
+                    <div class="p-2 border">플렉스 14</div>
+                    <div class="p-2 border">플렉스 15</div>
+                    <div class="p-2 border">플렉스 16</div>
+                    <div class="p-2 border">플렉스 17</div>
+                    <div class="p-2 border">플렉스 18</div>
+                    <div class="p-2 border">플렉스 19</div>
+                    <div class="p-2 border">플렉스 20</div>
+                </div>
+
+                <h4>align-content-between 사용</h4>
+                <div class="d-flex flex-wrap bg-light align-content-between" style="height: 300px;">
+                    <div class="p-2 border">플렉스 1</div>
+                    <div class="p-2 border">플렉스 2</div>
+                    <div class="p-2 border">플렉스 3</div>
+                    <div class="p-2 border">플렉스 4</div>
+                    <div class="p-2 border">플렉스 5</div>
+                    <div class="p-2 border">플렉스 6</div>
+                    <div class="p-2 border">플렉스 7</div>
+                    <div class="p-2 border">플렉스 8</div>
+                    <div class="p-2 border">플렉스 9</div>
+                    <div class="p-2 border">플렉스 10</div>
+                    <div class="p-2 border">플렉스 11</div>
+                    <div class="p-2 border">플렉스 12</div>
+                    <div class="p-2 border">플렉스 13</div>
+                    <div class="p-2 border">플렉스 14</div>
+                    <div class="p-2 border">플렉스 15</div>
+                    <div class="p-2 border">플렉스 16</div>
+                    <div class="p-2 border">플렉스 17</div>
+                    <div class="p-2 border">플렉스 18</div>
+                    <div class="p-2 border">플렉스 19</div>
+                    <div class="p-2 border">플렉스 20</div>
+                </div>
+
+                <h4>align-content-around 사용</h4>
+                <div class="d-flex flex-wrap bg-light align-content-around" style="height: 300px;">
+                    <div class="p-2 border">플렉스 1</div>
+                    <div class="p-2 border">플렉스 2</div>
+                    <div class="p-2 border">플렉스 3</div>
+                    <div class="p-2 border">플렉스 4</div>
+                    <div class="p-2 border">플렉스 5</div>
+                    <div class="p-2 border">플렉스 6</div>
+                    <div class="p-2 border">플렉스 7</div>
+                    <div class="p-2 border">플렉스 8</div>
+                    <div class="p-2 border">플렉스 9</div>
+                    <div class="p-2 border">플렉스 10</div>
+                    <div class="p-2 border">플렉스 11</div>
+                    <div class="p-2 border">플렉스 12</div>
+                    <div class="p-2 border">플렉스 13</div>
+                    <div class="p-2 border">플렉스 14</div>
+                    <div class="p-2 border">플렉스 15</div>
+                    <div class="p-2 border">플렉스 16</div>
+                    <div class="p-2 border">플렉스 17</div>
+                    <div class="p-2 border">플렉스 18</div>
+                    <div class="p-2 border">플렉스 19</div>
+                    <div class="p-2 border">플렉스 20</div>
+                </div>
+
+                <h4>align-content-stretch 사용</h4>
+                <div class="d-flex flex-wrap bg-light align-content-stretch" style="height: 300px;">
+                    <div class="p-2 border">플렉스 1</div>
+                    <div class="p-2 border">플렉스 2</div>
+                    <div class="p-2 border">플렉스 3</div>
+                    <div class="p-2 border">플렉스 4</div>
+                    <div class="p-2 border">플렉스 5</div>
+                    <div class="p-2 border">플렉스 6</div>
+                    <div class="p-2 border">플렉스 7</div>
+                    <div class="p-2 border">플렉스 8</div>
+                    <div class="p-2 border">플렉스 9</div>
+                    <div class="p-2 border">플렉스 10</div>
+                    <div class="p-2 border">플렉스 11</div>
+                    <div class="p-2 border">플렉스 12</div>
+                    <div class="p-2 border">플렉스 13</div>
+                    <div class="p-2 border">플렉스 14</div>
+                    <div class="p-2 border">플렉스 15</div>
+                    <div class="p-2 border">플렉스 16</div>
+                    <div class="p-2 border">플렉스 17</div>
+                    <div class="p-2 border">플렉스 18</div>
+                    <div class="p-2 border">플렉스 19</div>
+                    <div class="p-2 border">플렉스 20</div>
+                </div>
+            </div>
+
+            <div>
+                <h3>단일행 수직 정렬, align-items</h3>
+                <!-- 부모태그에 align-itmes-[위치] 를 추가하면 단일 행에 대해서 수직 정렬을 사용함 -->
+                <!-- align-items-start : 상단 정렬 -->
+                <!-- align-items-center : 중앙 정렬 -->
+                <!-- align-items-end : 하단 정렬 -->
+                <!-- align-items-baseline : text의 기준을 중심으로 정렬 -->
+                <!-- align-items-stretch : 늘려서 채우기 -->
+
+                <h4>align-items-start 사용</h4>
+                <div class="d-flex align-items-start bg-light mb-3" style="height: 150px;">
+                    <div class="p-2 border">플렉스 아이템 1</div>
+                    <div class="p-2 border">플렉스 아이템 2</div>
+                    <div class="p-2 border">플렉스 아이템 3</div>
+                </div>
+
+                <h4>align-items-center 사용</h4>
+                <div class="d-flex align-items-center bg-light mb-3" style="height: 150px;">
+                    <div class="p-2 border">플렉스 아이템 1</div>
+                    <div class="p-2 border">플렉스 아이템 2</div>
+                    <div class="p-2 border">플렉스 아이템 3</div>
+                </div>
+
+                <h4>align-items-end 사용</h4>
+                <div class="d-flex align-items-end bg-light mb-3" style="height: 150px;">
+                    <div class="p-2 border">플렉스 아이템 1</div>
+                    <div class="p-2 border">플렉스 아이템 2</div>
+                    <div class="p-2 border">플렉스 아이템 3</div>
+                </div>
+
+                <h4>align-items-baseline 사용</h4>
+                <div class="d-flex align-items-baseline bg-light mb-3" style="height: 150px;">
+                    <div class="p-2 border">플렉스 아이템 1</div>
+                    <div class="p-2 border"><h3>플렉스 아이템 2</h3></div>
+                    <div class="p-2 border"><h1>플렉스 아이템 3</h1></div>
+                    <div class="p-2 border"><h3>플렉스 아이템 4</h3></div>
+                    <div class="p-2 border">플렉스 아이템 5</div>
+                </div>
+
+                <h4>align-items-stretch 사용</h4>
+                <div class="d-flex align-items-stretch bg-light mb-3" style="height: 150px;">
+                    <div class="p-2 border">플렉스 아이템 1</div>
+                    <div class="p-2 border">플렉스 아이템 2</div>
+                    <div class="p-2 border">플렉스 아이템 3</div>
+                </div>
+            </div>
+
+            <br><hr><br>
+
+            <div>
+                <h3>셀프 정렬</h3>
+                <!-- 플렉스 박스의 자식 태그에 align-self-[위치] 형태로 사용 -->
+                <!-- align-self-start : 상단 정렬 -->
+                <!-- align-self-center : 중앙 정렬 -->
+                <!-- align-self-end : 하단 정렬 -->
+                <!-- align-self-baseline : text의 기준을 중심으로 정렬 -->
+                <!-- align-self-stretch : 늘려서 채움 -->
+
+                <h4>align-self-start 사용</h4>
+                <div class="d-flex bg-light mb-3" style="height: 150px;">
+                    <div class="p-2 border">플렉스 박스 아이템 1</div>
+                    <div class="p-2 border align-self-start">플렉스 박스 아이템 2</div>
+                    <div class="p-2 border">플렉스 박스 아이템 3</div>
+                </div>
+
+                <h4>align-self-center 사용</h4>
+                <div class="d-flex bg-light mb-3" style="height: 150px;">
+                    <div class="p-2 border">플렉스 박스 아이템 1</div>
+                    <div class="p-2 border align-self-center">플렉스 박스 아이템 2</div>
+                    <div class="p-2 border">플렉스 박스 아이템 3</div>
+                </div>
+
+                <h4>align-self-end 사용</h4>
+                <div class="d-flex bg-light mb-3" style="height: 150px;">
+                    <div class="p-2 border">플렉스 박스 아이템 1</div>
+                    <div class="p-2 border align-self-end">플렉스 박스 아이템 2</div>
+                    <div class="p-2 border">플렉스 박스 아이템 3</div>
+                </div>
+
+                <h4>align-self-baseline 사용</h4>
+                <div class="d-flex bg-light mb-3" style="height: 150px;">
+                    <div class="p-2 border">플렉스 박스 아이템 1</div>
+                    <div class="p-2 border align-self-baseline">플렉스 박스 아이템 2</div>
+                    <div class="p-2 border">플렉스 박스 아이템 3</div>
+                </div>
+
+                <h4>align-self-stretch 사용</h4>
+                <div class="d-flex bg-light mb-3" style="height: 150px;">
+                    <div class="p-2 border">플렉스 박스 아이템 1</div>
+                    <div class="p-2 border align-self-stretch">플렉스 박스 아이템 2</div>
+                    <div class="p-2 border">플렉스 박스 아이템 3</div>
+                </div>
+            </div>
+
+            <!-- 부트스트랩의 flexbox 는 반응형 웹을 지원함 -->
+            <!-- sm, md, lg, xl 모두 사용이 가능함 -->
+
+            <!-- d-sm-flex, d-sm-inline-flex -->
+            <!-- flex-sm-row, flex-sm-row-reverse, flex-sm-column, flex-sm-column-reverse -->
+            <!-- jusrify-content-sm-start, justify-content-sm-centerm, justify-content-sm-end, justify-content-sm-between, justify-content-sm-around -->
+            <!-- flex-sm-fill, flex-sm-grow-0, flex-sm-grow-1, order-sm-0 ~ 12 -->
+            <!-- flex-sm-nowrap, flex-sm-wrap, flex-sm-reverse -->
+            <!-- align-content-sm-start, align-content-sm-center, align-content-sm-end, align-content-sm-around, align-content-sm-stretch -->
+            <!-- align-self-sm-start, align-self-sm-center, align-self-sm-edn, align-self-sm-baseline, align-self-sm-stretch -->
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+</head>
+<body style="height: 1500px;">
+    <div class="container-fluid">
+        <br>
+        <h3>sticky Navbar 사용</h3>
+        <p>부트스트랩의 기존 navbar에 sticky-top 클래스를 추가하면 sticky navbar가 만들어짐</p>
+        <p>sticky navbar는 스크롤이 위쪽에 있을 경우 네비게이션바 위에 다른 컨텐츠가 존재하고 
+            스크롤을 아래로 내릴경우 네비게이션바가 화면 상단에 고정되는 형태의 네비게이션바</p>
+    </div>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <a href="#" class="navbar-brand">Home</a>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a href="#" class="nav-link">링크 1</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">링크 2</a></li>
+            <li class="nav-item"><a href="#" class="nav-link">링크 3</a></li>
+        </ul>
+    </nav>
+
+    <h3>close 사용</h3>
+    <!-- button 태그에 close 클래스를 사용하고 calue 난 텍스트 부분에 html 특수기호인 &times; 를 사용 시 x 모양의 버튼이 생성됨 -->
+    <button class="close" type="button">&times;</button>
+
+    <hr>
+
+    <div id="div01">
+        <h3>toast 사용하기</h3>
+        <!-- toast는 모달창과 비슷하지만 어떠한 일이 발생했을 경우 잠시동안만 화면에 출력되었다가 삭제되는 알림창용도로 사용 -->
+        <!-- div 태그에 toast 클래스를 사용하고, 자식 태그로 toast-header, toast-body 클래스를 사용하는 div를 가지고 있음 -->
+        <!-- toast는 기본적으로 jquery와 연동해서 사용해야 함 -->
+        <!-- toast는 기본적으로 숨겨져 있음, data-autohide="falst" 를 사용하면 기본적으로 화면에 출력할 수 있음 -->
+        <!-- 기본적으로 화면에 출력되는 toast를 닫으려면 button에 사용자 속성 data-dismiss="toast" 를 추가하여 닫으면 됨 -->
+        <div class="toast">
+            <div class="toast-header">
+                <h4>토스트 헤더</h4>
+            </div>
+            <div class="toast-body">
+                <p>토스트 바디</p>
+            </div>
+        </div>
+    </div>
+
+    <button class="btn btn-priamry" type="button" id="btnToast1">클릭 시 toast 출력</button>
+
+    <hr>
+
+    <div class="toast" id="toast2" data-autohide="false">
+        <div class="toast-header">
+            <strong class="text-primary mr-auto">토스트 헤더</strong></p>
+            <button class="close mb-1" type="button" data-dismiss="toast">&times;</button>
+        </div>
+        <div class="toast-body">
+            토스트 바디 부분입니다.
+        </div>
+    </div>
+
+    <script>
+        $("#btnToast1").on("click", function() {
+            (".toast").toast("show");
+        });
+
+        $("#toast2").toast("show");
+    </script>
+
+    <br><br><br><br><br>
+    <h1>스크롤을 아래로 내리면 네비게이션바가 상단에 고정</h1>
+    <br>
+    <h1>스크롤을 아래로 내리면 네비게이션바가 상단에 고정</h1>
+    <br>
+    <h1>스크롤을 아래로 내리면 네비게이션바가 상단에 고정</h1>
+    <br>
+    <h1>스크롤을 아래로 내리면 네비게이션바가 상단에 고정</h1>
+    <br>
+    <h1>스크롤을 아래로 내리면 네비게이션바가 상단에 고정</h1>
+</body>
+</html>
