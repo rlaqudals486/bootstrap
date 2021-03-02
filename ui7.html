@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+    <style>
+        body {
+            background-image: url(./21-03-02.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="p-3">
+            <button class="btn btn-dark" type="button" data-toggle="modal" data-target="#moadl1"  style="font-size: 25px;">menu</button>
+
+            <div class="modal fade" id="moadl1">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h4 class="modal-title text-light">Starters</h4>
+                            <button class="close text-light" type="button" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: 18px;">Tomato Soup <strong>$2.50</strong></p>
+                            <p style="font-size: 18px;">Chicken Salad <strong>$3.50</strong></p>
+                            <p style="font-size: 18px;">Bread and Butter <strong>$1.00</strong></p>
+                        </div>
+                        <div class="modal-header bg-dark">
+                            <h4 class="modal-title text-light">Main Courses</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: 18px;">Grilled Fish and Potatoes <strong>$8.50</strong></p>
+                            <p style="font-size: 18px;">Italian Pizza <strong>$5.50</strong></p>
+                            <p style="font-size: 18px;">Veggie Pasta <strong>$4.00</strong></p>
+                            <p style="font-size: 18px;">Chicken and Potatoes <strong>$6.50</strong></p>
+                            <p style="font-size: 18px;">Deluxe Burger <strong>$5.00</strong></p>
+                        </div>
+                        <div class="modal-header bg-dark">
+                            <h4 class="modal-title text-light">Desserts</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p style="font-size: 18px;">Fruit Salad <strong>$2.50</strong></p>
+                            <p style="font-size: 18px;">Ice cream <strong>$2.00</strong></p>
+                            <p style="font-size: 18px;">Chocolate Cake <strong>$4.00</strong></p>
+                            <p style="font-size: 18px;">Cheese <strong>$5.50</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="p-3">
+            <button class="btn btn-dark" type="button" data-toggle="modal" data-target="#moadl2"  style="font-size: 25px;">contact</button>
+            <div class="modal fade" id="moadl2">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header bg-dark">
+                            <h4 class="modal-title text-light">Contact</h4>
+                            <button class="close text-light" type="button" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Reserve a table, ask for today's special or just send us a message:</p>
+                            <div class="form-group input-group-lg">
+                                <input type="text" class="form-control input-lg" name="name" id="name" placeholder="Name">
+                            </div>
+
+                            <div class="form-group input-group-lg">
+                                <input type="text" class="form-control" name="people" id="people" placeholder="How many people">
+                            </div>
+
+                            <div class="form-group input-group-lg">
+                                <input type="datetime-local" class="form-control" name="datetime" id="datetime" placeholder="2020-11-16 오후 08:00">
+                            </div>
+                            
+                            <div class="form-group input-group-lg">
+                                <input type="text" class="form-control" name="msg" id="msg" placeholder="Message \ Special requirements">
+                            </div>
+                            
+                            <div class="form-group input-group-lg">
+                                <button type="submit" class="btn btn-link text-dark">SEND MESSAGE</button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="d-flex justify-content-center align-items-center" style="height:660px;">
+            <h1 class="text-light" style="font-size: 70px;">logo</h1>
+        </div>
+    </main>
+    <footer>
+        <div class="text-light p-3">
+            <h4>monday - friday 10-23 | saturday 14-02</h4>
+            <h5>42 village St, New York</h5>
+            <p>powered by <a href="#">w3.css</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
