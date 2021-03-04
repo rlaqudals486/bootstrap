@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-3.5.1.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+
+    <style>
+        @media (min-width: 1200px) {
+
+            .container,
+            .container-sm,
+            .container-md,
+            .container-lg,
+            .container-xl {
+                max-width: 1500px;
+            }
+
+            .main1 {
+                max-width: 1200px;
+            }
+
+        }
+
+        .hec1 {
+            line-height: 24px;
+            font-weight: 700;
+        }
+
+        .car11 {
+            transform: translateY(-50%);
+            top: 45%;
+            right: 45%;
+        }
+
+        .carousel-caption h3,
+        .carousel-caption h2 {
+            font-weight: 700;
+        }
+
+        .carousel-caption h5 {
+            font-size: 13px;
+        }
+
+        .btn-radius {
+            font-size: 13px;
+            padding: 10px;
+            font-weight: 700;
+            border-top-left-radius: 40px 40px;
+            border-top-right-radius: 40px 40px;
+            border-bottom-right-radius: 40px 40px;
+            border-bottom-left-radius: 40px 40px;
+        }
+
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            border-radius: 40px;
+            padding: 25px;
+        }
+
+        .select1 {
+            margin-top: 35px;
+        }
+
+        .select2 {
+            margin-top: 40px;
+        }
+
+        .carousel-inner {
+            margin-top: 80px;
+        }
+
+        .div1 {
+            width: 100%;
+            height: 70px;
+            border: 1px solid black;
+        }
+
+        .input1 {
+            padding: 10px;
+        }
+
+        .main3img1,
+        .main3img2 {
+            border-radius: 30px;
+        }
+
+        .main4 {
+            margin-bottom: 80px;
+        }
+
+        .main5 {
+            background-color: black;
+            height: 550px;
+        }
+
+        #img11 {
+            float: right;
+        }
+
+        #img12 {
+            float: left;
+        }
+
+        .main5 .carousel-inner ::after {
+            content: "";
+            display: table;
+            clear: both
+        }
+
+        .sub1 {
+            padding-top: 100px;
+        }
+
+        .cap1 {
+            padding-bottom: 60px;
+        }
+
+        .cap2 {
+            padding-bottom: 60px;
+            float: left;
+        }
+
+        .divcap1 > .carousel-caption {
+            position: absolute;
+            right: 15%;
+            bottom: 20px;
+            left: 6%;
+            z-index: 10;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .rwcp1 {
+            border-radius: 20px;
+        }
+
+        .pi3 {
+            margin-bottom: 80px;
+        }
+
+        .pp3 {
+            border: 1px solid lightgray;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand fixed-top bg-light">
+            <div class="container">
+                <a href="#" class="text-dark p-3">
+                    <h5><strong>SAMSUNG 삼성전자서비스</strong></h5>
+                </a>
+                <div class="mr-5 justify-content-center hec1">
+                    <a href="#" class="text-dark p-2">스스로해결</a>
+                    <a href="#" class="text-dark p-2">전문상담</a>
+                    <a href="#" class="text-dark p-2">서비스 안내</a>
+                    <a href="#" class="text-dark p-2">서비스 예약</a>
+                    <a href="#" class="text-dark p-2">소모품샵</a>
+                    <a href="#" class="text-dark p-2">고객의 소리</a>
+                </div>
+                <div class="justify-content-end">
+                    <button class="btn btn-link text-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                            class="bi bi-person" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-link text-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="28" fill="currentColor"
+                            class="bi bi-cart" viewBox="0 0 16 17">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                    </button>
+                    <button class="btn btn-link text-dark">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="24" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="imgslider" class="carousel slid carousel-fade">
+
+            <ul class="carousel-indicators">
+                <li data-target="#imgslider" data-slide-to="0" class="active"></li>
+                <li data-target="#imgslider" data-slide-to="1"></li>
+                <li data-target="#imgslider" data-slide-to="2"></li>
+                <li data-target="#imgslider" data-slide-to="3"></li>
+            </ul>
+
+            <div class="carousel-inner">
+                <div class="carousel-item active mb-4">
+                    <img src="./samsung1.jpg" alt="" style="width: 100%;" class="img-responsive">
+                    <div class="carousel-caption text-left car11">
+                        <h3>삼성전자서비스</h3>
+                        <h3 class="mb-4">홈페이지 리뉴얼 오픈</h3>
+                        <h5>홈페이지, 모바일앱이 새롭게 오픈하였습니다.</h5>
+                        <h5>더욱 편리하고 새로워진 모바일 서비스를 만나보세요!</h5>
+                    </div>
+                </div>
+                <div class="carousel-item mb-4">
+                    <img src="./samsung2.jpg" alt="" style="width: 100%;" class="img-responsive">
+                    <div class="carousel-caption text-left text-dark car11">
+                        <h2>모든 순간이 빛나고 특별하다</h2>
+                        <h2 class="mb-5">Galaxy S21/S21+/S21 Ultra 5G</h2>
+                        <a href="#" class="btn btn-radius bg-dark text-light"><span class="ml-2 mr-2">자세히보기</span></a>
+                    </div>
+                </div>
+                <div class="carousel-item mb-4">
+                    <img src="./samsung3.jpg" alt="" style="width: 100%;" class="img-responsive">
+                    <div class="carousel-caption text-left text-dark car11">
+                        <h2>Samsung Care+</h2>
+                        <h2 class="mb-4">걱정은 덜고 안심은 더하세요!</h2>
+                        <h5><strong>삼성 가전제품 전문 엔지니어와 설치기사님이</strong></h5>
+                        <h5 class="mb-5"><strong>직접 댁을 방문하여 관리해 드립니다.</strong></h5>
+                        <a href="#" class="btn btn-radius bg-dark text-light"><span class="ml-2 mr-2">자세히보기</span></a>
+                    </div>
+                </div>
+                <div class="carousel-item mb-4">
+                    <img src="./samsung4.jpg" alt="" style="width: 100%;" class="img-responsive">
+                    <div class="carousel-caption text-left text-dark car11">
+                        <h2>서비스 그 이상의 가치,</h2>
+                        <h2 class="mb-4">삼성전자서비스입니다.</h2>
+                        <h5>고객의 마음까지 케어하는 삼성전자서비스가 되겠습니다.</h5>
+                    </div>
+                </div>
+
+                <a href="#imgslider" class="carousel-control-prev" data-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark"></span>
+                </a>
+                <a href="#imgslider" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon bg-dark"></span>
+                </a>
+                <a href="#imgslider" class="carousel-control-next" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </section>
+
+        <section class="container main1">
+            <div class="text-center mt-5">
+                <label class="mb-4" style="font-size: 34px; line-height: 42px;"><strong>제품정보, 증상을 찾아보세요</strong></label>
+                <div class="div1">
+                    <div class="input1 input-group input-group-lg">
+                        <input class="form-control" type="text " id="search" name="search"
+                            placeholder="예) 동파, 침수, 비밀번호 해제, SL-C46xFW" style="width: 92%; border: none; ">
+                        <button class="btn text-dark">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="24" fill="currentColor"
+                                class="bi bi-search" viewBox="0 0 16 16">
+                                <path
+                                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <ul class="nav list-unstyled justify-content-center">
+                    <li class="mr-3"><a href="#" class="text-dark">
+                            <p>#SL-J1660</p>
+                        </a></li>
+                    <li class="mr-3"><a href="#" class="text-dark">
+                            <p>#삼성전자</p>
+                        </a></li>
+                    <li class="mr-3"><a href="#" class="text-dark">
+                            <p>#SL-J1560W</p>
+                        </a></li>
+                    <li class="mr-3"><a href="#" class="text-dark">
+                            <p>#sl-m2027</p>
+                        </a></li>
+                    <li class="mr-3"><a href="#" class="text-dark">
+                            <p>#액정수리</p>
+                        </a></li>
+                    <li class="mr-3"><a href="#" class="text-dark">
+                            <p>#sl-c565w</p>
+                        </a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="main2">
+            <div class="text-center mt-5">
+                <p class="mb-4" style="font-size: 34px; line-height: 42px;"><strong>궁금하신 제품을 선택하세요</strong></p>
+                <div class="select1">
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭모바일.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>모바일</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭PC.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>PC</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭모니터.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>모니터</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭복합기.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>프린터/복합기</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭TV.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>TV</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭에어컨.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>에어컨</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭냉장고.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>냉장고/김치냉장고</strong></span>
+                    </a>
+                </div>
+                <div class="select2 mb-5">
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭세탁기.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>세탁기</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭청소기.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>청소기</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭건강가전.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>건강가전</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭주방가전.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>주방가전</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭오디오.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>오디오</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭스마트싱스.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>스마트싱스</strong></span>
+                    </a>
+                    <a href="#" class="btn text-dark">
+                        <em><img src="./샘숭기타제품.png" alt="" style="width:50%" class="mb-2"></em>
+                        <br>
+                        <span><strong>기타제품</strong></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="main3">
+            <div class="container">
+                <div class="row main3body1 justify-content-center ml-2 py-5">
+                    <div class="col-lg-4 row">
+                        <a href="#">
+                            <img src="./3번째문단1.png" alt="" class="main3img1"><br>
+                        </a>
+                        <h4 class="ml-2 mt-4">
+                            <strong>제품자가진단</strong>
+                        </h4>
+                        <p class="ml-2" style="font-size: 13px;">등록된 생활가전 제품의 진단 결과를 간편하게 확인해 보세요.</p>
+                    </div>
+                    <div class="col-lg-4 row">
+                        <a href="#">
+                            <img src="./3번째문단2.png" alt="" class="main3img2"><br>
+                        </a>
+                        <h4 class="ml-2 mt-4">
+                            <strong>동영상</strong>
+                        </h4>
+                        <p class="ml-2" style="font-size: 13px;">동영상 가이드를 활용하여 제품에 대한 궁금증을 해결할 수 있습니다.</p>
+                    </div>
+                    <div class="col-lg-4 row">
+                        <a href="#">
+                            <img src="./3번째문단3.png" alt="" class="main3img1"><br>
+                        </a>
+                        <h4 class="ml-2 mt-4">
+                            <strong>다운로드 자료실</strong>
+                        </h4>
+                        <p class="ml-2" style="font-size: 13px;">제품 관련 유용한 자료를 다운로드할 수 있습니다.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="main4">
+            <div class="container text-center mt-5">
+                <p class="mb-4" style="font-size: 34px; line-height: 42px;"><strong>주요 서비스 안내</strong></p>
+                <div class="row mt-5">
+                    <div class="col-lg-4">
+                        <div class="float-right">
+                            <img src="./샘아이콘1.PNG" alt="">
+                        </div>
+                        <div class="text-left">
+                            <h4><strong>챗봇 상담</strong></h4>
+                            <h5 class="mt-4" style="font-size: 15px;">챗봇 써비에게 궁금한 점을</h5>
+                            <h5 class="mb-4" style="font-size: 15px;">물어보시면 이메일로 답변해 드립니다.</h5>
+                            <a href="#">
+                                <p class="text-dark"><strong>바로가기</strong></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="float-right">
+                            <img src="./샘아이콘2.PNG" alt="">
+                        </div>
+                        <div class="text-left">
+                            <h4><strong>이메일 상담</strong></h4>
+                            <h5 class="mt-4" style="font-size: 15px;">제품에 대한 궁금한 내용을</h5>
+                            <h5 class="mb-4" style="font-size: 15px;">이메일로 답변해 드립니다.</h5>
+                            <a href="#">
+                                <p class="text-dark"><strong>바로가기</strong></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="float-right">
+                            <img src="./샘아이콘3.PNG" alt="">
+                        </div>
+                        <div class="text-left">
+                            <h4><strong>원격 상담</strong></h4>
+                            <h5 class="mt-4" style="font-size: 15px;">고객님의 문의사항을 원격으로 상담</h5>
+                            <h5 class="mb-4" style="font-size: 15px;">받으실 수 있습니다.</h5>
+                            <a href="#">
+                                <p class="text-dark"><strong>바로가기</strong></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-lg-4">
+                        <div class="float-right">
+                            <img src="./샘아이콘4.PNG" alt="">
+                        </div>
+                        <div class="text-left">
+                            <h4><strong>센터방문 예약</strong></h4>
+                            <h5 class="mt-4" style="font-size: 15px;">예약 후 서비스센터에 방문하시면 보다</h5>
+                            <h5 class="mb-4" style="font-size: 15px;">빠른 서비스를 받으실 수 있습니다.</h5>
+                            <a href="#">
+                                <p class="text-dark"><strong>바로가기</strong></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="float-right">
+                            <img src="./샘아이콘5.PNG" alt="">
+                        </div>
+                        <div class="text-left">
+                            <h4><strong>출장서비스 예약</strong></h4>
+                            <h5 class="mt-4" style="font-size: 15px;">원하시는 곳으로 엔지니어가 방문하여</h5>
+                            <h5 class="mb-4" style="font-size: 15px;">제품을 점검해 드립니다.</h5>
+                            <a href="#">
+                                <p class="text-dark"><strong>바로가기</strong></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="float-right">
+                            <img src="./샘아이콘6.PNG" alt="">
+                        </div>
+                        <div class="text-left">
+                            <h4><strong>영수증/명세서</strong></h4>
+                            <h5 class="mt-4" style="font-size: 15px;">서비스센터에서 접수한 서비스</h5>
+                            <h5 class="mb-4" style="font-size: 15px;">정보를 조회하실 수 있습니다.</h5>
+                            <a href="#">
+                                <p class="text-dark"><strong>바로가기</strong></p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="main5">
+            <div class="text-center text-light">
+                <p class="sub1" style="font-size: 34px; line-height: 42px;"><strong>서비스 Tip</strong></p>
+                <p>간단한 팁과 해결방법을 찾아보세요!</p>
+
+                <div id="imgslider1" class="carousel slid  carousel-fade">
+
+
+                    <ul class="carousel-indicators">
+                        <li data-target="#imgslider1" data-slide-to="0" class="active"></li>
+                        <li data-target="#imgslider1" data-slide-to="1"></li>
+                    </ul>
+
+                    <div class="carousel-inner pi3">
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#">
+                                        <div style="position: absolute;">
+                                            <div style="position:relative; top: 100px; left: 650px;"><img
+                                                    src="./거지같은샘숭1.png" alt="" style="width: 50%;"></div>
+                                        </div>
+                                        <div class="carousel-caption d-flex justify-content-center">
+                                            <div class="cap1 text-left">
+                                                <h4 class="mb-4"><strong>슬기로운 건강생활</strong></h4>
+                                                <h5>쾌적한 실내환경을 위한</h5>
+                                                <h5>슬기로운 건강생활 가전</h5>
+                                            </div>
+                                        </div>
+                                        <img class="rwcp1" id="img11" src="./씹거지샘숭1.jpg" alt="" style="width: 65%;">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a href="#">
+                                        <div style="position: absolute;">
+                                            <div style="position:relative; top: 80px; left: 280px;"><img
+                                                    src="./거지같은샘숭2.png" alt="" style="width: 50%;"></div>
+                                        </div>
+                                        <div class="divcap1">
+                                            <div class="carousel-caption">
+                                                <div class="cap2 text-left">
+                                                    <h4 class="mb-4"><strong>휴대폰 액정 화면 단품 수리 안내</strong></h4>
+                                                    <h5>액정 파손 시 수리비용 할인 Tip을</h5>
+                                                    <h5>알려드려요!</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img class="rwcp1" id="img12" src="./씹거지샘숭2.jpg" alt="" style="width: 65%;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <a href="#">
+                                        <div style="position: absolute;">
+                                            <div style="position:relative; top: 100px; left: 650px;"><img
+                                                    src="./거지같은샘숭3.png" alt="" style="width: 50%;"></div>
+                                        </div>
+                                        <div class="carousel-caption d-flex justify-content-center">
+                                            <div class="cap1 text-left">
+                                                <h4 class="mb-4"><strong>갤럭시 북 Flex2</strong></h4>
+                                                <h5>Galaxy Book Flex2 5G</h5>
+                                                <h5>기능을 확인해 보세요!</h5>
+                                            </div>
+                                        </div>
+                                        <img class="rwcp1" id="img11" src="./씹거지샘숭3.jpg" alt="" style="width: 65%;">
+                                    </a>
+                                </div>
+                                <div class="col-sm-6">
+                                    <a href="#">
+                                        <div style="position: absolute;">
+                                            <div style="position:relative; top: 80px; left: 280px;"><img
+                                                    src="./거지같은샘숭4.png" alt="" style="width: 50%;"></div>
+                                        </div>
+                                        <div class="divcap1">
+                                            <div class="carousel-caption">
+                                                <div class="cap2 text-left">
+                                                    <h4 class="mb-4"><strong>S21/S21+/S21 Ultra 5G</strong></h4>
+                                                    <h5>갤럭시 S21/S21+/S21 Ultra 5G의</h5>
+                                                    <h5>사양 및 기능, 특징을 소개합니다.</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img class="rwcp1" id="img12" src="./씹거지샘숭4.jpg" alt="" style="width: 65%;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#imgslider1" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark"></span>
+                        </a>
+                        <a href="#imgslider1" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon bg-dark"></span>
+                        </a>
+                        <a href="#imgslider1" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="main6">
+            <div class="container">
+                <div class="row main6body1 justify-content-center ml-2 py-5">
+                    <div class="col-lg-3 row">
+                        <a href="#">
+                            <img src="./씹성1.jpg" alt="" class="main3img1"><br>
+                        </a>
+                        <h4 class="ml-2 mt-4">
+                            <strong>가자! 비수구미 마을로!</strong>
+                        </h4>
+                        <p class="ml-2" style="font-size: 13px;">비수구미 마을로 서비스가다</p>
+                    </div>
+                    <div class="col-lg-3 row">
+                        <a href="#">
+                            <img src="./씹성2.jpg" alt="" class="main3img2"><br>
+                        </a>
+                        <h4 class="ml-2 mt-4">
+                            <strong>휴대폰 충전단자 물기감지!</strong>
+                        </h4>
+                        <p class="ml-2" style="font-size: 13px;">물기 감지 알람시 조치 방법</p>
+                    </div>
+                    <div class="col-lg-3 row">
+                        <a href="#">
+                            <img src="./씹성3.jpg" alt="" class="main3img1"><br>
+                        </a>
+                        <h4 class="ml-2 mt-4">
+                            <strong>세탁기 물이 안빠진다면!</strong>
+                        </h4>
+                        <p class="ml-2" style="font-size: 13px;">급수/배수 필터 청소하기</p>
+                    </div>
+                    <div class="col-lg-3 row">
+                        <a href="#">
+                            <img src="./씹성4.png" alt="" class="main3img1"><br>
+                        </a>
+                        <h4 class="ml-2 mt-4">
+                            <strong>삼성 모바일 앱 고객지원</strong>
+                        </h4>
+                        <p class="ml-2" style="font-size: 13px;">모바일 앱 관련 1:1 문의 사이트</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="container">
+                <p class="text-center" style="font-size: 34px; line-height: 42px; margin-bottom: 30px;"><strong>공지사항</strong></p>
+            <ul class="d-flex justify-content-center list-unstyled py-3 pp3">
+                <li class="mr-2 ml-4">
+                    <h4 class="mb-3"><strong><a href="#" class="text-dark">2021년 3월 6일 거창센터 리뉴얼 공사 안내</a></strong></h4>
+                    <p>2021-03-04</p>
+                </li>
+                <li class="mr-2 ml-2" style="border-left: 1px solid lightgray;">
+                    <h4 class="mb-3"><strong><a href="#" class="text-dark">2021년 3월 6일 거창센터 리뉴얼 공사 안내</a></strong></h4>
+                    <p>2021-03-04</p>
+                </li>
+                <li class="mr-2 ml-2" style="border-left: 1px solid lightgray;">
+                    <h4 class="mb-3"><strong><a href="#" class="text-dark">2021년 3월 6일 거창센터 리뉴얼 공사 안내</a></strong></h4>
+                    <p>2021-03-04</p>
+                </li>
+            </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="p-5">
+        <nav class="navbar navbar-expand"  style="border-top: 1px solid lightgray; border-bottom: 1px solid lightgray;">
+            <div class="container">
+                <div class="row">
+                    <ul class="d-flex justify-content-center list-unstyled">
+                        <li><a href="#" class="text-dark p-4">이용약관</a></li>
+                        <li><a href="#" class="text-dark p-4"><strong>개인정보처리방침</strong></a></li>
+                        <li><a href="#" class="text-dark p-4">영상정보처리기기운영관리방침</a></li>
+                        <li><a href="#" class="text-dark p-4">홈페이지의견</a></li>
+                        <li><a href="#" class="text-dark p-4">아디이어정책</a></li>
+                        <li><a href="#" class="text-dark p-4">사이트맵</a></li>
+                        <li><a href="#" class="text-dark p-4">공지사항</a></li>
+                        <li><a href="#" class="text-dark p-4">이벤트</a></li>
+                        <li><a href="#" class="text-dark p-4">이용가이드</a></li>
+                        <li><a href="#" class="text-dark p-4">회사소개</a></li>
+                    </ul>
+                </div>   
+            </div>
+        </nav>
+
+        <style>
+            .footerp1{
+                border-right: 1px solid lightgray;
+                padding-right: 20px;
+            }
+            
+            .footerp2{
+                padding-left: 20px;
+            }
+
+            .footerp3{
+                padding-left:20px;
+                padding-right:20px;
+                border-right: 1px solid lightgray;
+            }
+        </style>
+
+        <div style="font-size: 12px;">
+            <ul class="list-unstyled d-flex mt-4">
+                <li class="footerp1">주소 : 경기도 수원시 영통구 삼성로 290 삼성전자서비스주식회사</li>
+                <li class="footerp2">사업자등록번호 : 124-81-58485</li>
+            </ul>
+            <ul class="list-unstyled d-flex">
+                <li class="footerp1">사업자등록번호 : 124-81-58485</li>
+                <li class="footerp3">통신판매업신고번호 : 제2005-406호</li>
+                <li class="footerp3">사업자번호확인</li>
+                <li class="footerp2">호스팅서비스제공자 : 삼성에스디에스㈜</li>
+            </ul>
+            <ul class="list-unstyled d-flex">
+                <li class="footerp1">대표전화 : 1588-3366</li>
+                <li class="footerp2">회원문의 : 080-719-4031</li>
+            </ul>
+            <p>본 사이트의 컨텐츠는 저작권법의 보호를 받는 바 무단 전재, 복사, 배포 등을 금합니다.</p>
+            <p>Copyright ©SAMSUNG ELECTRONICS SERVICE CO., Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
